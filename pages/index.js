@@ -116,7 +116,7 @@ const App = () => {
               <Item item={item[0]}></Item>
               <Item item2={item[1]}></Item>
             </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "black"}}></div>
+            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
           </Fragment>
         )
       })}
@@ -128,7 +128,7 @@ const App = () => {
               <Item item={item[0]}></Item>
               <Item item2={item[1]}></Item>
             </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "black"}}></div>
+            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
           </Fragment>
         )
       })}
@@ -140,7 +140,7 @@ const App = () => {
               <Item item={item[0]}></Item>
               <Item item2={item[1]}></Item>
             </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "black"}}></div>
+            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
           </Fragment>
         )
       })}
@@ -152,7 +152,7 @@ const App = () => {
               <Item item={item[0]}></Item>
               <Item item2={item[1]}></Item>
             </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "black"}}></div>
+            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
           </Fragment>
         )
       })}
@@ -164,7 +164,7 @@ const App = () => {
               <Item item={item[0]}></Item>
               <Item item2={item[1]}></Item>
             </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "black"}}></div>
+            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
           </Fragment>
         )
       })}
@@ -176,7 +176,7 @@ const App = () => {
               <Item item={item[0]}></Item>
               <Item item2={item[1]}></Item>
             </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "black"}}></div>
+            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
           </Fragment>
         )
       })}
@@ -188,7 +188,7 @@ const App = () => {
               <Item item={item[0]}></Item>
               <Item item2={item[1]}></Item>
             </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "black"}}></div>
+            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
           </Fragment>
         )
       })}

@@ -4,7 +4,19 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+html {
   margin: 0;
   box-sizing: border-box;
+  background-color: rgb(24, 22, 22);
+  overflow-x: hidden;
+}
+
+p,
+li {
+  color: "white";
+}
+
+button {
+  background-color: #2783ba;
 }
