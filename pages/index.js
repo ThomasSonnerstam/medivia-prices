@@ -129,6 +129,23 @@ const App = () => {
     ["Soul dagger", "200gp"]
   ]
 
+  const aremis = [
+    ["Flaming bow", "18 000gp"],
+    ["Poisoned bow", "16 000gp"],
+    ["Bow", "130gp"],
+    ["Elven bow", "500gp"],
+    ["Hunting bow", "1000gp"],
+    ["Shakirian bow", "32 000gp"],
+    ["Crossbow", "160gp"],
+    ["Blazing crossbow", "70 000gp"],
+    ["Enhanced crossbow", "24 000gp"],
+    ["Elven crossbow", "7500gp"],
+    ["Ignited bow", "5000gp"],
+    ["Fiery bow", "46 000gp"],
+    ["Crystallized crossbow", "55 000 gp"],
+    ["Envenomed crossbow", "65 000gp"]
+  ]
+
 
   return (
     <section 
@@ -138,7 +155,6 @@ const App = () => {
       minHeight: "100vh",
       alignItems: "center",
       flexDirection: "column",
-      marginTop: "100px"
     }}>
       <h1 style={{ color: "white" }}>Medivia item prices</h1>
       <p style={{ fontSize: "20px", color: "white" }}>Here you can find the best prices in each city/NPC</p>
@@ -151,6 +167,7 @@ const App = () => {
         <Button handleClick={() => { setCity("bluedjinn") }} city="Blue djinn" />
         <Button handleClick={() => { setCity("greendjinn") }} city="Green djinn" />
         <Button handleClick={() => { setCity("wulkan") }} city="Wulkan" />
+        <Button handleClick={() => { setCity("aremis") }} city="Aremis" />
       </div>
 
       <ul style={{ listStyle: "none"}}>
@@ -239,6 +256,18 @@ const App = () => {
       })}
 
       {city == "wulkan" && wulkan.map((item, i) => {
+        return (
+          <Fragment key={i}>
+            <div style={{ display: "flex" }} >
+              <Item item={item[0]}></Item>
+              <Item item2={item[1]}></Item>
+            </div>
+            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
+          </Fragment>
+        )
+      })}
+
+      {city == "aremis" && aremis.map((item, i) => {
         return (
           <Fragment key={i}>
             <div style={{ display: "flex" }} >
