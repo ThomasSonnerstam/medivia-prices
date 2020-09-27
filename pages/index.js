@@ -1,7 +1,6 @@
 import { Fragment, useState } from "react";
 import Item from "../components/Item";
 import Button from "../components/Button";
-import "../styles.css";
 
 const App = () => {
 
@@ -97,8 +96,7 @@ const App = () => {
       minHeight: "100vh",
       alignItems: "center",
       flexDirection: "column",
-      margin: "0px",
-      backgroundColor: "#2b3033"
+      marginTop: "100px"
     }}>
       <div style={{ marginBottom: "100px", display: "flex", justifyContent: "space-evenly"}}>
         <Button handleClick={() => { setCity("arak") }} city="Arak" />
