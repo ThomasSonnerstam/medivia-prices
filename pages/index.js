@@ -85,6 +85,48 @@ const App = () => {
     ["Black shield", "800gp"],
     ["Ancient shield", "900gp"],
     ["Vampire shield", "15 000gp"]
+  ];
+
+  const wulkan = [
+    ["Chaos shield", "500 000gp"],
+    ["Magic plate armor", "200 000gp"],
+    ["Red scale armor", "190 000gp"],
+    ["Demon armor", "150 000gp"],
+    ["Magic sword", "150 000gp"],
+    ["Stonecutter axe", "150 000gp"],
+    ["Void staff", "150 000gp"],
+    ["Vanquisher", "100 000gp"],
+    ["Ancient armor", "75 000gp"],
+    ["Demonbone legs", "60 000gp"],
+    ["Golden legs", "50 000gp"],
+    ["Mastermind shield", "50 000gp"],
+    ["Ancient legs", "45 000gp"],
+    ["Demon helmet", "45 000gp"],
+    ["Ancient helmet", "42 000"],
+    ["Ancient sword", "40 000gp"],
+    ["Demonbone armor", "40 000gp"],
+    ["Helmet of the Ancients", "40 000gp"],
+    ["Hellforged shield", "36 000gp"],
+    ["Shakirian blade", "35 000gp"],
+    ["Royal plate armor", "35 000gp"],
+    ["Silver mace", "16 500gp"],
+    ["Unholy plate armor", "15 000gp"],
+    ["Crown boots", "12 000gp"],
+    ["Demonbone boots", "14 000gp"],
+    ["Light armor", "13 000gp"],
+    ["Swinging demolisher", "11 000gp"],
+    ["Torn quicksand boots", "10 000gp"],
+    ["Demonbone helmet", "9000gp"],
+    ["Fiery armor", "7500gp"],
+    ["Fiery helmet", "7500gp"],
+    ["Assassin blade", "6300gp"],
+    ["Bone basher", "5500gp"],
+    ["Unholy halberd", "5500gp"],
+    ["Ancient boots", "5000gp"],
+    ["Shakirian shield", "3000gp"],
+    ["Wooden maul", "2000gp"],
+    ["Drake scale helmet", "850gp"],
+    ["Soul dagger", "200gp"]
   ]
 
 
@@ -98,6 +140,8 @@ const App = () => {
       flexDirection: "column",
       marginTop: "100px"
     }}>
+      <h1 style={{ color: "white" }}>Medivia item prices</h1>
+      <p style={{ fontSize: "20px", color: "white" }}>Here you can find the best prices in each city/NPC</p>
       <div style={{ marginBottom: "100px", display: "flex", justifyContent: "space-evenly"}}>
         <Button handleClick={() => { setCity("arak") }} city="Arak" />
         <Button handleClick={() => { setCity("osaris") }} city="Osaris" />
@@ -106,6 +150,7 @@ const App = () => {
         <Button handleClick={() => { setCity("lucindel") }} city="Lucindel" />
         <Button handleClick={() => { setCity("bluedjinn") }} city="Blue djinn" />
         <Button handleClick={() => { setCity("greendjinn") }} city="Green djinn" />
+        <Button handleClick={() => { setCity("wulkan") }} city="Wulkan" />
       </div>
 
       <ul style={{ listStyle: "none"}}>
@@ -182,6 +227,18 @@ const App = () => {
       })}
 
       {city == "greendjinn" && greendjinn.map((item, i) => {
+        return (
+          <Fragment key={i}>
+            <div style={{ display: "flex" }} >
+              <Item item={item[0]}></Item>
+              <Item item2={item[1]}></Item>
+            </div>
+            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
+          </Fragment>
+        )
+      })}
+
+      {city == "wulkan" && wulkan.map((item, i) => {
         return (
           <Fragment key={i}>
             <div style={{ display: "flex" }} >
