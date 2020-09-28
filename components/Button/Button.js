@@ -8,6 +8,14 @@ const StyledButton = styled.button`
   width: 25%;
   height: 50px;
 
+  :focus {
+    outline: none;
+  }
+
+  .focus {
+    background-color: #58b85b;
+  }
+
   @media screen and (min-width: 700px) {
     width: 25%
   }
