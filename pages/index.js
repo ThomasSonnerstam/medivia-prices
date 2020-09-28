@@ -28,8 +28,8 @@ const App = () => {
   return (
     <Layout>
       <Section>
-        <h1 style={{ color: "white", fontSize: "30px" }}>Medivia item prices</h1>
-        <p style={{ textAlign: "center", fontSize: "20px", color: "white" }}>Toggle between locations to see the best prices per specific items</p>
+        <h1 style={{ color: "white", fontSize: "30px" }}>Medivia sell prices</h1>
+        <p style={{ textAlign: "center", fontSize: "20px", color: "white" }}>Choose to filter on cities/NPCs or search under all items</p>
         <ButtonContainer>
           <Button handleClick={() => {setIsCities(true); setIsAllItems(false)}} text="Cities/NPC"></Button>
           <Button handleClick={() => {setIsCities(false); setSelected(""); setIsAllItems(true)}} text="All items"></Button>
