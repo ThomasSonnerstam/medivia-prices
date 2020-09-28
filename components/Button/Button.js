@@ -5,7 +5,7 @@ const StyledButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
   margin: 8px;
-  width: 25%;
+  width: 28%;
   height: 50px;
 
   :focus {
