@@ -146,7 +146,7 @@ const App = () => {
       alignItems: "center",
       flexDirection: "column",
     }}>
-      <h1 style={{ color: "white" }}>Medivia item prices</h1>
+      <h1 style={{ color: "white", fontSize: "30px" }}>Medivia item prices</h1>
       <p style={{ fontSize: "20px", color: "white" }}>Toggle between locations to see the best prices per specific items</p>
       <div style={{ display: "flex", flexWrap: "wrap", width: "500px" }}>
         <Button handleClick={() => { setSelected("arak") }} city="Arak" />
