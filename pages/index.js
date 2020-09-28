@@ -1,6 +1,9 @@
 import { Fragment, useState } from "react";
-import Item from "../components/Item";
-import Button from "../components/Button";
+import Item from "../components/Item/Item";
+import Button from "../components/Button/Button";
+import Section from "../components/Section/Section";
+import List from "../components/List/List";
+import ButtonContainer from "../components/ButtonContainer/ButtonContainer";
 
 const App = () => {
 
@@ -138,17 +141,10 @@ const App = () => {
   }
 
   return (
-    <section 
-      style={{
-      display: "flex",
-      width: "100vw",
-      minHeight: "100vh",
-      alignItems: "center",
-      flexDirection: "column",
-    }}>
+    <Section>
       <h1 style={{ color: "white", fontSize: "30px" }}>Medivia item prices</h1>
-      <p style={{ fontSize: "20px", color: "white" }}>Toggle between locations to see the best prices per specific items</p>
-      <div style={{ display: "flex", flexWrap: "wrap", width: "500px" }}>
+      <p style={{ textAlign: "center", fontSize: "20px", color: "white" }}>Toggle between locations to see the best prices per specific items</p>
+      <ButtonContainer>
         <Button handleClick={() => { setSelected("arak") }} city="Arak" />
         <Button handleClick={() => { setSelected("osaris") }} city="Osaris" />
         <Button handleClick={() => { setSelected("garrogat") }} city="Garrogat" />
@@ -157,9 +153,9 @@ const App = () => {
         <Button handleClick={() => { setSelected("greendjinn") }} city="Green djinn" />
         <Button handleClick={() => { setSelected("wulkan") }} city="Wulkan" />
         <Button handleClick={() => { setSelected("aremis") }} city="Aremis" />
-      </div>
+      </ButtonContainer>
 
-      <ul style={{ listStyle: "none", width: "40vw" }}>
+      <List>
         <div style={{ display: "flex", justifyContent: "space-between"}}>
           <p>Item name:</p>
           <p>Price (gp)</p>
@@ -259,8 +255,8 @@ const App = () => {
           </Fragment>
         )
       })}
-      </ul>
-    </section>
+      </List>
+    </Section>
   )
 }
 
