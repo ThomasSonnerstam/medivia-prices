@@ -4,6 +4,7 @@ import Button from "../components/Button/Button";
 import Section from "../components/Section/Section";
 import List from "../components/List/List";
 import ButtonContainer from "../components/ButtonContainer/ButtonContainer";
+import Layout from "../components/Layout/Layout";
 
 const App = () => {
 
@@ -141,122 +142,124 @@ const App = () => {
   }
 
   return (
-    <Section>
-      <h1 style={{ color: "white", fontSize: "30px" }}>Medivia item prices</h1>
-      <p style={{ textAlign: "center", fontSize: "20px", color: "white" }}>Toggle between locations to see the best prices per specific items</p>
-      <ButtonContainer>
-        <Button handleClick={() => { setSelected("arak") }} city="Arak" />
-        <Button handleClick={() => { setSelected("osaris") }} city="Osaris" />
-        <Button handleClick={() => { setSelected("garrogat") }} city="Garrogat" />
-        <Button handleClick={() => { setSelected("lucindel") }} city="Lucindel" />
-        <Button handleClick={() => { setSelected("bluedjinn") }} city="Blue djinn" />
-        <Button handleClick={() => { setSelected("greendjinn") }} city="Green djinn" />
-        <Button handleClick={() => { setSelected("wulkan") }} city="Wulkan" />
-        <Button handleClick={() => { setSelected("aremis") }} city="Aremis" />
-      </ButtonContainer>
+    <Layout>
+      <Section>
+        <h1 style={{ color: "white", fontSize: "30px" }}>Medivia item prices</h1>
+        <p style={{ textAlign: "center", fontSize: "20px", color: "white" }}>Toggle between locations to see the best prices per specific items</p>
+        <ButtonContainer>
+          <Button handleClick={() => { setSelected("arak") }} city="Arak" />
+          <Button handleClick={() => { setSelected("osaris") }} city="Osaris" />
+          <Button handleClick={() => { setSelected("garrogat") }} city="Garrogat" />
+          <Button handleClick={() => { setSelected("lucindel") }} city="Lucindel" />
+          <Button handleClick={() => { setSelected("bluedjinn") }} city="Blue djinn" />
+          <Button handleClick={() => { setSelected("greendjinn") }} city="Green djinn" />
+          <Button handleClick={() => { setSelected("wulkan") }} city="Wulkan" />
+          <Button handleClick={() => { setSelected("aremis") }} city="Aremis" />
+        </ButtonContainer>
 
-      <List>
-        <div style={{ display: "flex", justifyContent: "space-between"}}>
-          <p>Item name:</p>
-          <p>Price (gp)</p>
-        </div>
-      {selected == "arak" && location.arak.map((item, i) => {
-        return (
-          <Fragment key={i}>
-            <div style={{ display: "flex", justifyContent: "space-between" }} >
-              <Item item={item.name} />
-              <Item item2={item.price} />
-            </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-          </Fragment>
-        )
-      })}
+        <List>
+          <div style={{ display: "flex", justifyContent: "space-between"}}>
+            <p>Item name:</p>
+            <p>Price (gp)</p>
+          </div>
+        {selected == "arak" && location.arak.map((item, i) => {
+          return (
+            <Fragment key={i}>
+              <div style={{ display: "flex", justifyContent: "space-between" }} >
+                <Item item={item.name} />
+                <Item item2={item.price} />
+              </div>
+              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
+            </Fragment>
+          )
+        })}
 
-      {selected == "osaris" && location.osaris.map((item, i) => {
-        return (
-          <Fragment key={i}>
-            <div style={{ display: "flex", justifyContent: "space-between" }} >
-              <Item item={item.name} />
-              <Item item2={item.price} />
-            </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-          </Fragment>
-        )
-      })}
+        {selected == "osaris" && location.osaris.map((item, i) => {
+          return (
+            <Fragment key={i}>
+              <div style={{ display: "flex", justifyContent: "space-between" }} >
+                <Item item={item.name} />
+                <Item item2={item.price} />
+              </div>
+              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
+            </Fragment>
+          )
+        })}
 
-      {selected == "garrogat" && location.garrogat.map((item, i) => {
-        return (
-          <Fragment key={i}>
-            <div style={{ display: "flex", justifyContent: "space-between" }} >
-              <Item item={item.name} />
-              <Item item2={item.price} />
-            </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-          </Fragment>
-        )
-      })}
+        {selected == "garrogat" && location.garrogat.map((item, i) => {
+          return (
+            <Fragment key={i}>
+              <div style={{ display: "flex", justifyContent: "space-between" }} >
+                <Item item={item.name} />
+                <Item item2={item.price} />
+              </div>
+              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
+            </Fragment>
+          )
+        })}
 
-      {selected == "lucindel" && location.lucindel.map((item, i) => {
-        return (
-          <Fragment key={i}>
-            <div style={{ display: "flex", justifyContent: "space-between" }} >
-              <Item item={item.name} />
-              <Item item2={item.price} />
-            </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-          </Fragment>
-        )
-      })}
+        {selected == "lucindel" && location.lucindel.map((item, i) => {
+          return (
+            <Fragment key={i}>
+              <div style={{ display: "flex", justifyContent: "space-between" }} >
+                <Item item={item.name} />
+                <Item item2={item.price} />
+              </div>
+              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
+            </Fragment>
+          )
+        })}
 
-      {selected == "bluedjinn" && location.bluedjinn.map((item, i) => {
-        return (
-          <Fragment key={i}>
-            <div style={{ display: "flex", justifyContent: "space-between" }} >
-              <Item item={item.name} />
-              <Item item2={item.price} />
-            </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-          </Fragment>
-        )
-      })}
+        {selected == "bluedjinn" && location.bluedjinn.map((item, i) => {
+          return (
+            <Fragment key={i}>
+              <div style={{ display: "flex", justifyContent: "space-between" }} >
+                <Item item={item.name} />
+                <Item item2={item.price} />
+              </div>
+              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
+            </Fragment>
+          )
+        })}
 
-      {selected == "greendjinn" && location.greendjinn.map((item, i) => {
-        return (
-          <Fragment key={i}>
-            <div style={{ display: "flex", justifyContent: "space-between" }} >
-              <Item item={item.name} />
-              <Item item2={item.price} />
-            </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-          </Fragment>
-        )
-      })}
+        {selected == "greendjinn" && location.greendjinn.map((item, i) => {
+          return (
+            <Fragment key={i}>
+              <div style={{ display: "flex", justifyContent: "space-between" }} >
+                <Item item={item.name} />
+                <Item item2={item.price} />
+              </div>
+              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
+            </Fragment>
+          )
+        })}
 
-      {selected == "wulkan" && location.wulkan.map((item, i) => {
-        return (
-          <Fragment key={i}>
-            <div style={{ display: "flex", justifyContent: "space-between" }} >
-              <Item item={item.name} />
-              <Item item2={item.price} />
-            </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-          </Fragment>
-        )
-      })}
+        {selected == "wulkan" && location.wulkan.map((item, i) => {
+          return (
+            <Fragment key={i}>
+              <div style={{ display: "flex", justifyContent: "space-between" }} >
+                <Item item={item.name} />
+                <Item item2={item.price} />
+              </div>
+              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
+            </Fragment>
+          )
+        })}
 
-      {selected == "aremis" && location.aremis.map((item, i) => {
-        return (
-          <Fragment key={i}>
-            <div style={{ display: "flex", justifyContent: "space-between" }} >
-              <Item item={item.name} />
-              <Item item2={item.price} />
-            </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-          </Fragment>
-        )
-      })}
-      </List>
-    </Section>
+        {selected == "aremis" && location.aremis.map((item, i) => {
+          return (
+            <Fragment key={i}>
+              <div style={{ display: "flex", justifyContent: "space-between" }} >
+                <Item item={item.name} />
+                <Item item2={item.price} />
+              </div>
+              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
+            </Fragment>
+          )
+        })}
+        </List>
+      </Section>
+    </Layout>
   )
 }
 
