@@ -15,6 +15,8 @@ const App = () => {
   const [isCities, setIsCities] = useState(false);
   const [isAllItems, setIsAllItems] = useState(false);
 
+  console.log(Object.keys(locationItems));
+
   return (
     <Layout>
       <Section>
@@ -190,25 +192,30 @@ const App = () => {
         </List>
 
         {isAllItems && 
-        <List>
-          {allItems.items.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
-            return (
-              <Fragment key={i}>
-                <div style={{ display: "flex", alignItems: "center" }} >
-                  <img style={{ marginRight: "20px", width: "32px", height: "32px"}} src={item.url}></img>
+        <>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+
+        </div>
+          <List>
+            {allItems.items.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
+              return (
+                <Fragment key={i}>
+                  <div style={{ display: "flex", alignItems: "center" }} >
+                    <img style={{ marginRight: "20px", width: "32px", height: "32px"}} src={item.url}></img>
+                  
+                  <div style={{ display: "flex", flexDirection: "column"}}>
+                    <p style={{ color: "#2783ba", textTransform: "capitalize"}}>{item.name}</p>
+                    <p><span style={{ color: "#58b85b" }}>Price: </span>{item.price}</p>
+                  <p><span style={{ color: "#58b85b" }}>Location: </span> {item.location}</p>
+                  </div>
+                  </div>
+                  <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
+                </Fragment>
                 
-                <div style={{ display: "flex", flexDirection: "column"}}>
-                  <p style={{ color: "#2783ba"}}>{item.name}</p>
-                  <p><span style={{ color: "#58b85b" }}>Price: </span>{item.price}</p>
-                 <p><span style={{ color: "#58b85b" }}>Location: </span>: {item.location}</p>
-                </div>
-                </div>
-                <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-              </Fragment>
-              
-            )
-          })}
-        </List>
+              )
+            })}
+          </List>
+        </>
         }
       </Section>
     </Layout>
