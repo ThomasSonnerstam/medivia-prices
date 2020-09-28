@@ -2,6 +2,7 @@ const locationItems =
   {
     arak: [
       { name: "Halberd", price: 400, url: "https://wiki.mediviastats.info/images/1/12/Halberd.png", location: "Arak" },
+      { name: "Battle Axe", price: 80, url: "https://wiki.mediviastats.info/images/5/59/Battle_axe.png", location: "Arak" },
       { name: "Brass Armor", price: 150, url: "https://wiki.mediviastats.info/images/b/b6/Brass_armor.png", location: "Arak" },
       { name: "Battle Hammer", price: 120, url: "https://wiki.mediviastats.info/images/5/5d/Battle_hammer.png", location: "Arak" },
       { name: "Plate Armor", price: 400, url: "https://wiki.mediviastats.info/images/9/9b/Plate_armor.png", location: "Arak" },
