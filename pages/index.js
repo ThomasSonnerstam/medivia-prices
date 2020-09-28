@@ -62,6 +62,9 @@ const App = () => {
       { name: "Dragon shield", price: 4000, url: "https://wiki.mediviastats.info/images/b/b9/Dragon_shield.png" },
       { name: "Guardian shield", price: 2000, url: "https://wiki.mediviastats.info/images/8/83/Guardian_shield.png" },
       { name: "Watcher shield", price: 1200, url: "" },
+      { name: "Red spellwand", price: 5000, url: "https://wiki.mediviastats.info/images/1/1d/Red_Spellwand.gif" },
+      { name: "Blue spellwand", price: 5000, url: "https://wiki.mediviastats.info/images/f/fa/Blue_Spellwand.gif" },
+      { name: "Green spellwand", price: 5000, url: "https://wiki.mediviastats.info/images/0/08/Green_Spellwand.gif" },
     ],
     greendjinn: [
       { name: "Scimitar", price: 150, url: "https://wiki.mediviastats.info/images/e/e5/Scimitar.png" },
