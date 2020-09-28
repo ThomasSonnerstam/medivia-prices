@@ -18,7 +18,8 @@ const App = () => {
       { name: "Battle hammer", price: 120, url: "https://wiki.mediviastats.info/images/5/5d/Battle_hammer.png" },
       { name: "Plate armor", price: 400, url: "https://wiki.mediviastats.info/images/9/9b/Plate_armor.png" },
       { name: "Steel shield", price: 80, url: "https://wiki.mediviastats.info/images/b/bc/Steel_shield.png" },
-      { name: "Battle shield", price: 95, url: "https://wiki.mediviastats.info/images/6/67/Battle_shield.png" }
+      { name: "Battle shield", price: 95, url: "https://wiki.mediviastats.info/images/6/67/Battle_shield.png" },
+      { name: "Two handed sword", price: 450, url: "https://wiki.mediviastats.info/images/2/2f/Two_handed_sword.png" }
     ],
     osaris: [
       { name: "Double axe", price: 260, url: "https://wiki.mediviastats.info/images/2/25/Double_axe.png" },
@@ -34,6 +35,9 @@ const App = () => {
     ],
     lucindel: [
       { name: "Plate legs", price: 115, url: "https://wiki.mediviastats.info/images/b/b9/Plate_legs.png" },
+    ],
+    mittenhoff: [
+      { name: "Dwarven shield", price: 100, url: "https://wiki.mediviastats.info/images/9/91/Dwarven_shield.png" }
     ],
     bluedjinn: [
       { name: "Dragon lance", price: 9000, url: "https://wiki.mediviastats.info/images/6/67/Dragon_lance.png" },
@@ -225,6 +229,7 @@ const App = () => {
           <Button handleClick={() => { setSelected("osaris") }} city="Osaris" />
           <Button handleClick={() => { setSelected("garrogat") }} city="Garrogat" />
           <Button handleClick={() => { setSelected("lucindel") }} city="Lucindel" />
+          <Button handleClick={() => { setSelected("mittenhoff") }} city="Mittenhoff" />
           <Button handleClick={() => { setSelected("bluedjinn") }} city="Blue djinn" />
           <Button handleClick={() => { setSelected("greendjinn") }} city="Green djinn" />
           <Button handleClick={() => { setSelected("wulkan") }} city="Wulkan" />
@@ -278,6 +283,19 @@ const App = () => {
         })}
 
         {selected == "lucindel" && location.lucindel.map((item, i) => {
+          return (
+            <Fragment key={i}>
+              <div style={{ display: "flex", justifyContent: "space-between" }} >
+                <img src={item.url}></img>
+                <Item item={item.name} />
+                <Item item2={item.price} />
+              </div>
+              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
+            </Fragment>
+          )
+        })}
+
+        {selected == "mittenhoff" && location.mittenhoff.map((item, i) => {
           return (
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >

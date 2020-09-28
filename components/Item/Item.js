@@ -4,6 +4,7 @@ const ListItem = styled.li`
   color: white;
   margin: 5px 0;
   font-size: 20px;
+  text-transform: capitalize;
 ` 
 
 
