@@ -30,6 +30,7 @@ const App = () => {
       <Section>
         <h1 style={{ color: "white", fontSize: "30px" }}>Medivia sell prices</h1>
         <p style={{ textAlign: "center", fontSize: "20px", color: "white" }}>Choose to filter on cities/NPCs or search under all items</p>
+        <p style={{ fontSize: "20px", color: "#fac125" }}>If you find any errors, or want items added - message Revi Black on Legacy.</p>
         <ButtonContainer>
           <Button handleClick={() => {setIsCities(true); setIsAllItems(false)}} text="Cities/NPC"></Button>
           <Button handleClick={() => {setIsCities(false); setSelected(""); setIsAllItems(true)}} text="All items"></Button>
