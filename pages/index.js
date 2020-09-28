@@ -4,7 +4,6 @@ import Button from "../components/Button";
 
 const App = () => {
 
-  const [city, setCity] = useState("arak");
   const [selected, setSelected] = useState("arak");
 
   const location = 
@@ -148,8 +147,8 @@ const App = () => {
       flexDirection: "column",
     }}>
       <h1 style={{ color: "white" }}>Medivia item prices</h1>
-      <p style={{ fontSize: "20px", color: "white" }}>Here you can find the best prices in each city/NPC</p>
-      <div style={{ marginBottom: "100px", display: "flex", justifyContent: "space-evenly"}}>
+      <p style={{ fontSize: "20px", color: "white" }}>Toggle between locations to see the best prices per specific items</p>
+      <div style={{ display: "flex", flexWrap: "wrap", width: "500px" }}>
         <Button handleClick={() => { setSelected("arak") }} city="Arak" />
         <Button handleClick={() => { setSelected("osaris") }} city="Osaris" />
         <Button handleClick={() => { setSelected("garrogat") }} city="Garrogat" />
@@ -160,11 +159,15 @@ const App = () => {
         <Button handleClick={() => { setSelected("aremis") }} city="Aremis" />
       </div>
 
-      <ul style={{ listStyle: "none"}}>
+      <ul style={{ listStyle: "none", width: "40vw" }}>
+        <div style={{ display: "flex", justifyContent: "space-between"}}>
+          <p>Item name:</p>
+          <p>Price (gp)</p>
+        </div>
       {selected == "arak" && location.arak.map((item, i) => {
         return (
           <Fragment key={i}>
-            <div style={{ display: "flex" }} >
+            <div style={{ display: "flex", justifyContent: "space-between" }} >
               <Item item={item.name} />
               <Item item2={item.price} />
             </div>
@@ -176,7 +179,7 @@ const App = () => {
       {selected == "osaris" && location.osaris.map((item, i) => {
         return (
           <Fragment key={i}>
-            <div style={{ display: "flex" }} >
+            <div style={{ display: "flex", justifyContent: "space-between" }} >
               <Item item={item.name} />
               <Item item2={item.price} />
             </div>
@@ -188,7 +191,7 @@ const App = () => {
       {selected == "garrogat" && location.garrogat.map((item, i) => {
         return (
           <Fragment key={i}>
-            <div style={{ display: "flex" }} >
+            <div style={{ display: "flex", justifyContent: "space-between" }} >
               <Item item={item.name} />
               <Item item2={item.price} />
             </div>
@@ -200,7 +203,7 @@ const App = () => {
       {selected == "lucindel" && location.lucindel.map((item, i) => {
         return (
           <Fragment key={i}>
-            <div style={{ display: "flex" }} >
+            <div style={{ display: "flex", justifyContent: "space-between" }} >
               <Item item={item.name} />
               <Item item2={item.price} />
             </div>
@@ -212,7 +215,7 @@ const App = () => {
       {selected == "bluedjinn" && location.bluedjinn.map((item, i) => {
         return (
           <Fragment key={i}>
-            <div style={{ display: "flex" }} >
+            <div style={{ display: "flex", justifyContent: "space-between" }} >
               <Item item={item.name} />
               <Item item2={item.price} />
             </div>
@@ -224,7 +227,7 @@ const App = () => {
       {selected == "greendjinn" && location.greendjinn.map((item, i) => {
         return (
           <Fragment key={i}>
-            <div style={{ display: "flex" }} >
+            <div style={{ display: "flex", justifyContent: "space-between" }} >
               <Item item={item.name} />
               <Item item2={item.price} />
             </div>
@@ -236,7 +239,7 @@ const App = () => {
       {selected == "wulkan" && location.wulkan.map((item, i) => {
         return (
           <Fragment key={i}>
-            <div style={{ display: "flex" }} >
+            <div style={{ display: "flex", justifyContent: "space-between" }} >
               <Item item={item.name} />
               <Item item2={item.price} />
             </div>
@@ -248,7 +251,7 @@ const App = () => {
       {selected == "aremis" && location.aremis.map((item, i) => {
         return (
           <Fragment key={i}>
-            <div style={{ display: "flex" }} >
+            <div style={{ display: "flex", justifyContent: "space-between" }} >
               <Item item={item.name} />
               <Item item2={item.price} />
             </div>

@@ -12,9 +12,9 @@ html {
   overflow-x: hidden;
 }
 
-p,
-li {
-  color: "white";
+p {
+  color: white;
+  font-size: 30px;
 }
 
 button {
