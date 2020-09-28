@@ -246,7 +246,7 @@ const App = () => {
             <p>Item name:</p>
             <p>Price (gp)</p>
           </div>
-        {selected == "arak" && location.arak.map((item, i) => {
+        {selected == "arak" && location.arak.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
           return (
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
@@ -259,7 +259,7 @@ const App = () => {
           )
         })}
 
-        {selected == "osaris" && location.osaris.map((item, i) => {
+        {selected == "osaris" && location.osaris.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
           return (
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
@@ -272,7 +272,7 @@ const App = () => {
           )
         })}
 
-        {selected == "garrogat" && location.garrogat.map((item, i) => {
+        {selected == "garrogat" && location.garrogat.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
           return (
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
@@ -285,7 +285,7 @@ const App = () => {
           )
         })}
 
-        {selected == "lucindel" && location.lucindel.map((item, i) => {
+        {selected == "lucindel" && location.lucindel.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
           return (
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
@@ -298,7 +298,7 @@ const App = () => {
           )
         })}
 
-        {selected == "mittenhoff" && location.mittenhoff.map((item, i) => {
+        {selected == "mittenhoff" && location.mittenhoff.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
           return (
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
@@ -311,7 +311,7 @@ const App = () => {
           )
         })}
 
-        {selected == "bluedjinn" && location.bluedjinn.map((item, i) => {
+        {selected == "bluedjinn" && location.bluedjinn.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
           return (
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
@@ -324,7 +324,7 @@ const App = () => {
           )
         })}
 
-        {selected == "greendjinn" && location.greendjinn.map((item, i) => {
+        {selected == "greendjinn" && location.greendjinn.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
           return (
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
@@ -337,7 +337,7 @@ const App = () => {
           )
         })}
 
-        {selected == "wulkan" && location.wulkan.map((item, i) => {
+        {selected == "wulkan" && location.wulkan.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
           return (
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
@@ -350,7 +350,7 @@ const App = () => {
           )
         })}
 
-        {selected == "aremis" && location.aremis.map((item, i) => {
+        {selected == "aremis" && location.aremis.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
           return (
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
@@ -363,7 +363,7 @@ const App = () => {
           )
         })}
 
-        {selected == "ziyad" && location.ziyad.map((item, i) => {
+        {selected == "ziyad" && location.ziyad.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
           return (
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
@@ -376,7 +376,7 @@ const App = () => {
           )
         })}
 
-        {selected == "draculd" && location.draculd.map((item, i) => {
+        {selected == "draculd" && location.draculd.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
           return (
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
