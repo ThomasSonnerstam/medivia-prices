@@ -5,147 +5,138 @@ import Button from "../components/Button";
 const App = () => {
 
   const [city, setCity] = useState("arak");
+  const [selected, setSelected] = useState("arak");
 
-  const arak = [
-    ["Halberd", "400gp"],
-    ["Brass armor", "150gp"],
-    ["Morning star", "90gp"],
-    ["Battle hammer", "120gp"],
-    ["Plate armor", "400gp"],
-    ["Steel shield", "80gp"],
-    ["Battle shield", "95gp"] 
-  ];
-
-  const osaris = [
-    ["Double axe", "260gp"],
-    ["Steel helmet", "293gp"]
-  ];
-
-  const garrogat = [
-    ["Clerical mace", "170gp"],
-    ["Crystal ball", "190gp"],
-    ["Mind stone", "170gp"],
-    ["Iron helmet", "150gp"],
-    ["Viking shield", "85gp"]
-  ];
-
-  const abukir = [
-    ["Bow", "130gp"],
-    ["Crossbow", "160gp"]
-  ];
-
-  const lucindel = [
-    ["Plate legs", "115gp"]
-  ];
-
-  const bluedjinn = [
-    ["Dragon lance", "9000gp"],
-    ["Fire axe", "8000gp"],
-    ["Fire sword", "4000gp"],
-    ["War hammer", "1200gp"],
-    ["Spike sword", "1000gp"],
-    ["Ice rapier", "1000gp"],
-    ["Broad sword", "500gp"],
-    ["Obsidian lance", "500gp"],
-    ["Crown armor", "12 000gp"],
-    ["Blue robe", "10 000gp"],
-    ["Noble armor", "900gp"],
-    ["Royal helmet", "30 000gp"],
-    ["Crusader helmet", "6000gp"],
-    ["Crown helmet", "2500gp"],
-    ["Crown legs", "12 000gp"],
-    ["Scorpid hood", "2300gp"],
-    ["Boots of haste", "30 000gp"],
-    ["Phoenix shield", "16 000gp"],
-    ["Crown shield", "8000gp"],
-    ["Dragon shield", "4000gp"],
-    ["Guardian shield", "2000gp"],
-    ["Watcher shield", "1200gp"]
-  ];
-
-  const greendjinn = [
-    ["Scimitar", "150gp"],
-    ["Giant sword", "17 000gp"],
-    ["Serpent sword", "900gp"],
-    ["Poison dagger", "50gp"],
-    ["Knight axe", "2000gp"],
-    ["Dragon hammer", "2000gp"],
-    ["Skull staff", "6000gp"],
-    ["Dark armor", "400gp"],
-    ["Dark shield", "166gp"],
-    ["Knight armor", "5000gp"],
-    ["Dark helmet", "250gp"],
-    ["Knight helmet", "2500gp"],
-    ["Warrior helmet", "5000gp"],
-    ["Strange helmet", "500gp"],
-    ["Mystic turban", "150gp"],
-    ["Spider silk armor", "2000gp"],
-    ["Knight legs", "5000gp"],
-    ["Tower shield", "8000gp"],
-    ["Black shield", "800gp"],
-    ["Ancient shield", "900gp"],
-    ["Vampire shield", "15 000gp"]
-  ];
-
-  const wulkan = [
-    ["Chaos shield", "500 000gp"],
-    ["Magic plate armor", "200 000gp"],
-    ["Red scale armor", "190 000gp"],
-    ["Demon armor", "150 000gp"],
-    ["Magic sword", "150 000gp"],
-    ["Stonecutter axe", "150 000gp"],
-    ["Void staff", "150 000gp"],
-    ["Vanquisher", "100 000gp"],
-    ["Ancient armor", "75 000gp"],
-    ["Demonbone legs", "60 000gp"],
-    ["Golden legs", "50 000gp"],
-    ["Mastermind shield", "50 000gp"],
-    ["Ancient legs", "45 000gp"],
-    ["Demon helmet", "45 000gp"],
-    ["Ancient helmet", "42 000"],
-    ["Ancient sword", "40 000gp"],
-    ["Demonbone armor", "40 000gp"],
-    ["Helmet of the Ancients", "40 000gp"],
-    ["Hellforged shield", "36 000gp"],
-    ["Shakirian blade", "35 000gp"],
-    ["Royal plate armor", "35 000gp"],
-    ["Silver mace", "16 500gp"],
-    ["Unholy plate armor", "15 000gp"],
-    ["Crown boots", "12 000gp"],
-    ["Demonbone boots", "14 000gp"],
-    ["Light armor", "13 000gp"],
-    ["Swinging demolisher", "11 000gp"],
-    ["Torn quicksand boots", "10 000gp"],
-    ["Demonbone helmet", "9000gp"],
-    ["Fiery armor", "7500gp"],
-    ["Fiery helmet", "7500gp"],
-    ["Assassin blade", "6300gp"],
-    ["Bone basher", "5500gp"],
-    ["Unholy halberd", "5500gp"],
-    ["Ancient boots", "5000gp"],
-    ["Shakirian shield", "3000gp"],
-    ["Wooden maul", "2000gp"],
-    ["Drake scale helmet", "850gp"],
-    ["Soul dagger", "200gp"]
-  ]
-
-  const aremis = [
-    ["Flaming bow", "18 000gp"],
-    ["Poisoned bow", "16 000gp"],
-    ["Bow", "130gp"],
-    ["Elven bow", "500gp"],
-    ["Hunting bow", "1000gp"],
-    ["Shakirian bow", "32 000gp"],
-    ["Crossbow", "160gp"],
-    ["Blazing crossbow", "70 000gp"],
-    ["Enhanced crossbow", "24 000gp"],
-    ["Elven crossbow", "7500gp"],
-    ["Ignited bow", "5000gp"],
-    ["Fiery bow", "46 000gp"],
-    ["Crystallized crossbow", "55 000 gp"],
-    ["Envenomed crossbow", "65 000gp"]
-  ]
-
+  const location = 
+  {
+    arak: [
+      { name: "Halberd", price: 400 },
+      { name: "Brass armor", price: 150 },
+      { name: "Morning star", price: 90 },
+      { name: "Battle hammer", price: 120 },
+      { name: "Plate armor", price: 400 },
+      { name: "Steel shield", price: 80 },
+      { name: "Battle shield", price: 95 }
+    ],
+    osaris: [
+      { name: "Double axe", price: 260 },
+      { name: "Steel helmet", price: 293 }
+    ],
+    garrogat: [
+      { name: "Clerical mace", price: 170 },
+      { name: "Crystal ball", price: 190 },
+      { name: "Mind stone", price: 170 },
+      { name: "Iron helmet", price: 150 },
+      { name: "Viking shield", price: 85 },
+    ],
+    lucindel: [
+      { name: "Plate legs", price: 115 },
+    ],
+    bluedjinn: [
+      { name: "Dragon lance", price: 9000 },
+      { name: "Fire axe", price: 8000 },
+      { name: "Fire sword", price: 400 },
+      { name: "War hammer", price: 4000 },
+      { name: "Spike sword", price: 1000 },
+      { name: "Ice rapier", price: 1000 },
+      { name: "Broad sword", price: 500 },
+      { name: "Obsidian lance", price: 500 },
+      { name: "Crown armor", price: 12000 },
+      { name: "Blue robe", price: 10000 },
+      { name: "Noble armor", price: 900 },
+      { name: "Royal helmet", price: 30000 },
+      { name: "Crusader helmet", price: 6000 },
+      { name: "Crown helmet", price: 2500 },
+      { name: "Crown legs", price: 12000 },
+      { name: "Scorpid hood", price: 2300 },
+      { name: "Boots of haste", price: 30000 },
+      { name: "Phoenix shield", price: 16000 },
+      { name: "Crown shield", price: 8000 },
+      { name: "Dragon shield", price: 4000 },
+      { name: "Guardian shield", price: 2000 },
+      { name: "Watcher shield", price: 1200 },
+    ],
+    greendjinn: [
+      { name: "Scimitar", price: 150 },
+      { name: "Giant sword", price: 17000 },
+      { name: "Serpent sword", price: 900 },
+      { name: "Poison dagger", price: 50 },
+      { name: "Knight axe", price: 2000 },
+      { name: "Dragon hammer", price: 2000 },
+      { name: "Skull staff", price: 6000 },
+      { name: "Dark armor", price: 400 },
+      { name: "Dark shield", price: 166 },
+      { name: "Knight armor", price: 5000 },
+      { name: "Dark helmet", price: 250 },
+      { name: "Knight helmet", price: 2500 },
+      { name: "Warrior helmet", price: 5000 },
+      { name: "Strange helmet", price: 500 },
+      { name: "Mystic turban", price: 150 },
+      { name: "Spider silk armor", price: 2000 },
+      { name: "Knight legs", price: 5000 },
+      { name: "Tower shield", price: 8000 },
+      { name: "Black shield", price: 800 },
+      { name: "Ancient shield", price: 900 },
+      { name: "Vampire shield", price: 15000 },
+    ],
+    wulkan: [
+      { name: "Chaos shield", price: 500000 },
+      { name: "Magic plate armor", price: 200000 },
+      { name: "Red scale armor", price: 190000 },
+      { name: "Demon armor", price: 150000 },
+      { name: "Magic sword", price: 150000 },
+      { name: "Stonecutter axe", price: 150000 },
+      { name: "Void staff", price: 150000 },
+      { name: "Vanquisher", price: 100000 },
+      { name: "Ancient armor", price: 75000 },
+      { name: "Demonbone legs", price: 60000 },
+      { name: "Golden legs", price: 50000 },
+      { name: "Mastermind shield", price: 50000 },
+      { name: "Ancient legs", price: 45000 },
+      { name: "Demon helmet", price: 45000 },
+      { name: "Ancient helmet", price: 42000 },
+      { name: "Ancient sword", price: 40000 },
+      { name: "Demonbone armor", price: 40000 },
+      { name: "Helmet of the Ancients", price: 40000 },
+      { name: "Hellforged shield", price: 36000 },
+      { name: "Shakirian blade", price: 35000 },
+      { name: "Royal plate armor", price: 35000 },
+      { name: "Silver mace", price: 16500 },
+      { name: "Unholy plate armor", price: 15000 },
+      { name: "Crown boots", price: 12000 },
+      { name: "Demonbone boots", price: 14000 },
+      { name: "Light armor", price: 13000 },
+      { name: "Swinging demolisher", price: 11000 },
+      { name: "Torn quicksand boots", price: 10000 },
+      { name: "Demonbone helmet", price: 9000 },
+      { name: "Fiery armor", price: 7500 },
+      { name: "Fiery helmet", price: 7500 },
+      { name: "Assassin blade", price: 6300 },
+      { name: "Bone basher", price: 5500 },
+      { name: "Unholy halberd", price: 5500 },
+      { name: "Ancient boots", price: 5000 },
+      { name: "Shakirian shield", price: 3000 },
+      { name: "Wooden maul", price: 2000 },
+      { name: "Drake scale helmet", price: 850 },
+      { name: "Soul dagger", price: 200 },
+    ],
+    aremis: [
+      { name: "Flaming bow", price: 18000 },
+      { name: "Poisoned bow", price: 16000 },
+      { name: "Bow", price: 130 },
+      { name: "Elven bow", price: 500 },
+      { name: "Hunting bow", price: 1000 },
+      { name: "Shakirian bow", price: 32000 },
+      { name: "Crossbow", price: 160 },
+      { name: "Blazing crossbow", price: 70000 },
+      { name: "Enhanced crossbow", price: 24000 },
+      { name: "Ignited bow", price: 5000 },
+      { name: "Fiery bow", price: 46000 },
+      { name: "Crystallized crossbow", price: 55000 },
+      { name: "Envenomed crossbow", price: 65000 },
+      { name: "Elven crossbow", price: 7500 },
+    ]
+  }
 
   return (
     <section 
@@ -159,120 +150,107 @@ const App = () => {
       <h1 style={{ color: "white" }}>Medivia item prices</h1>
       <p style={{ fontSize: "20px", color: "white" }}>Here you can find the best prices in each city/NPC</p>
       <div style={{ marginBottom: "100px", display: "flex", justifyContent: "space-evenly"}}>
-        <Button handleClick={() => { setCity("arak") }} city="Arak" />
-        <Button handleClick={() => { setCity("osaris") }} city="Osaris" />
-        <Button handleClick={() => { setCity("garrogat") }} city="Garrogat" />
-        <Button handleClick={() => { setCity("abukir") }} city="Abukir" />
-        <Button handleClick={() => { setCity("lucindel") }} city="Lucindel" />
-        <Button handleClick={() => { setCity("bluedjinn") }} city="Blue djinn" />
-        <Button handleClick={() => { setCity("greendjinn") }} city="Green djinn" />
-        <Button handleClick={() => { setCity("wulkan") }} city="Wulkan" />
-        <Button handleClick={() => { setCity("aremis") }} city="Aremis" />
+        <Button handleClick={() => { setSelected("arak") }} city="Arak" />
+        <Button handleClick={() => { setSelected("osaris") }} city="Osaris" />
+        <Button handleClick={() => { setSelected("garrogat") }} city="Garrogat" />
+        <Button handleClick={() => { setSelected("lucindel") }} city="Lucindel" />
+        <Button handleClick={() => { setSelected("bluedjinn") }} city="Blue djinn" />
+        <Button handleClick={() => { setSelected("greendjinn") }} city="Green djinn" />
+        <Button handleClick={() => { setSelected("wulkan") }} city="Wulkan" />
+        <Button handleClick={() => { setSelected("aremis") }} city="Aremis" />
       </div>
 
       <ul style={{ listStyle: "none"}}>
-      {city == "arak" && arak.map((item, i) => {
+      {selected == "arak" && location.arak.map((item, i) => {
         return (
           <Fragment key={i}>
             <div style={{ display: "flex" }} >
-              <Item item={item[0]}></Item>
-              <Item item2={item[1]}></Item>
+              <Item item={item.name} />
+              <Item item2={item.price} />
             </div>
             <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
           </Fragment>
         )
       })}
 
-      {city == "osaris" && osaris.map((item, i) => {
+      {selected == "osaris" && location.osaris.map((item, i) => {
         return (
           <Fragment key={i}>
             <div style={{ display: "flex" }} >
-              <Item item={item[0]}></Item>
-              <Item item2={item[1]}></Item>
+              <Item item={item.name} />
+              <Item item2={item.price} />
             </div>
             <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
           </Fragment>
         )
       })}
 
-      {city == "garrogat" && garrogat.map((item, i) => {
+      {selected == "garrogat" && location.garrogat.map((item, i) => {
         return (
           <Fragment key={i}>
             <div style={{ display: "flex" }} >
-              <Item item={item[0]}></Item>
-              <Item item2={item[1]}></Item>
+              <Item item={item.name} />
+              <Item item2={item.price} />
             </div>
             <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
           </Fragment>
         )
       })}
 
-      {city == "abukir" && abukir.map((item, i) => {
+      {selected == "lucindel" && location.lucindel.map((item, i) => {
         return (
           <Fragment key={i}>
             <div style={{ display: "flex" }} >
-              <Item item={item[0]}></Item>
-              <Item item2={item[1]}></Item>
+              <Item item={item.name} />
+              <Item item2={item.price} />
             </div>
             <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
           </Fragment>
         )
       })}
 
-      {city == "lucindel" && lucindel.map((item, i) => {
+      {selected == "bluedjinn" && location.bluedjinn.map((item, i) => {
         return (
           <Fragment key={i}>
             <div style={{ display: "flex" }} >
-              <Item item={item[0]}></Item>
-              <Item item2={item[1]}></Item>
+              <Item item={item.name} />
+              <Item item2={item.price} />
             </div>
             <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
           </Fragment>
         )
       })}
 
-      {city == "bluedjinn" && bluedjinn.map((item, i) => {
+      {selected == "greendjinn" && location.greendjinn.map((item, i) => {
         return (
           <Fragment key={i}>
             <div style={{ display: "flex" }} >
-              <Item item={item[0]}></Item>
-              <Item item2={item[1]}></Item>
+              <Item item={item.name} />
+              <Item item2={item.price} />
             </div>
             <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
           </Fragment>
         )
       })}
 
-      {city == "greendjinn" && greendjinn.map((item, i) => {
+      {selected == "wulkan" && location.wulkan.map((item, i) => {
         return (
           <Fragment key={i}>
             <div style={{ display: "flex" }} >
-              <Item item={item[0]}></Item>
-              <Item item2={item[1]}></Item>
+              <Item item={item.name} />
+              <Item item2={item.price} />
             </div>
             <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
           </Fragment>
         )
       })}
 
-      {city == "wulkan" && wulkan.map((item, i) => {
+      {selected == "aremis" && location.aremis.map((item, i) => {
         return (
           <Fragment key={i}>
             <div style={{ display: "flex" }} >
-              <Item item={item[0]}></Item>
-              <Item item2={item[1]}></Item>
-            </div>
-            <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-          </Fragment>
-        )
-      })}
-
-      {city == "aremis" && aremis.map((item, i) => {
-        return (
-          <Fragment key={i}>
-            <div style={{ display: "flex" }} >
-              <Item item={item[0]}></Item>
-              <Item item2={item[1]}></Item>
+              <Item item={item.name} />
+              <Item item2={item.price} />
             </div>
             <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
           </Fragment>
