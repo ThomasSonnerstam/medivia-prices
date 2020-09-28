@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
           name="Description"
           content="Simple tool to help Medivians sell their loot."
         />
-        <link rel="shortcut icon" href="../../favicon.png" type="image/png" />
+        <link rel="icon" href="icon.png" type="image/png" />
       </Head>
 
       <div>{children}</div>
