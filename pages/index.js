@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import Item from "../components/Item/Item";
 import Button from "../components/Button/Button";
 import Section from "../components/Section/Section";
@@ -7,15 +7,23 @@ import ButtonContainer from "../components/ButtonContainer/ButtonContainer";
 import Layout from "../components/Layout/Layout";
 import locationItems from "../locationItems";
 import allItems from "../allItems";
-import Container from "../components/Container/Container";
+import FormContainer from "../components/FormContainer/FormContainer";
 
 const App = () => {
 
   const [selected, setSelected] = useState("");
   const [isCities, setIsCities] = useState(false);
   const [isAllItems, setIsAllItems] = useState(false);
+  const [userInput, setUserInput] = useState("");
 
-  console.log(Object.keys(locationItems));
+  const handleChange = event => {
+    setUserInput(event.target.value);
+  };
+
+  const results = !userInput ? allItems.items : allItems.items.filter(item => 
+      item.name.toLowerCase().includes(userInput.toLocaleLowerCase())
+    );
+
 
   return (
     <Layout>
@@ -46,7 +54,7 @@ const App = () => {
           <div style={{ width: "100%", height: "1px", backgroundColor: "white", margin: "15px 0"}}></div>
           </>}
 
-        <List>     
+        <List>    
         {selected == "arak" && locationItems.arak.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
           return (
             <Fragment key={i}>
@@ -193,11 +201,12 @@ const App = () => {
 
         {isAllItems && 
         <>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-
-        </div>
+        <FormContainer>
+          <label htmlFor="search" style={{ color: "white" }}>Search item:</label>
+          <input style={{ paddingLeft: "15px", height: "5vh", width: "50%", marginTop: "10px", border: "none", borderRadius: "5px"}} type="text" name="search" id="search" value={userInput} onChange={handleChange}></input>
+        </FormContainer>
           <List>
-            {allItems.items.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
+            {results.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
               return (
                 <Fragment key={i}>
                   <div style={{ display: "flex", alignItems: "center" }} >
@@ -211,7 +220,6 @@ const App = () => {
                   </div>
                   <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
                 </Fragment>
-                
               )
             })}
           </List>
