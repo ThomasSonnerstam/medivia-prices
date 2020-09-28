@@ -1,18 +1,17 @@
 import styled from "@emotion/styled";
 
 const ListItem = styled.li`
-  color: white;
+  color: #dee0df;
   margin: 5px 0;
-  font-size: 20px;
+  font-size: 16px;
   text-transform: capitalize;
 ` 
 
 
-const Item = ({item, item2}) => {
+const Item = ({item}) => {
   return (
     <>
       <ListItem>{item}</ListItem>
-      <ListItem>{item2}</ListItem>
     </>
   )
 }

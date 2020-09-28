@@ -22,9 +22,9 @@ const StyledButton = styled.button`
 `
 
 
-const Button = ({city, handleClick}) => {
+const Button = ({text, handleClick}) => {
   return (
-  <StyledButton onClick={handleClick}>{city}</StyledButton>
+  <StyledButton onClick={handleClick}>{text}</StyledButton>
   )
 }
 
