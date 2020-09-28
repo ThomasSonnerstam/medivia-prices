@@ -60,7 +60,9 @@ const App = () => {
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
                 <img src={item.url}></img>
-                <Item item={item.name} />
+                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
+                 <Item item={item.name} />
+                </a>
                 <Item item={item.price} />
               </div>
               <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
@@ -73,7 +75,9 @@ const App = () => {
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
                 <img src={item.url}></img>
-                <Item item={item.name} />
+                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
+                 <Item item={item.name} />
+                </a>
                 <Item item={item.price} />
               </div>
               <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
@@ -86,7 +90,9 @@ const App = () => {
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
                 <img src={item.url}></img>
-                <Item item={item.name} />
+                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
+                 <Item item={item.name} />
+                </a>
                 <Item item={item.price} />
               </div>
               <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
@@ -99,7 +105,9 @@ const App = () => {
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
                 <img src={item.url}></img>
-                <Item item={item.name} />
+                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
+                 <Item item={item.name} />
+                </a>
                 <Item item={item.price} />
               </div>
               <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
@@ -112,7 +120,9 @@ const App = () => {
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
                 <img src={item.url}></img>
-                <Item item={item.name} />
+                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
+                 <Item item={item.name} />
+                </a>
                 <Item item={item.price} />
               </div>
               <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
@@ -125,7 +135,9 @@ const App = () => {
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
                 <img src={item.url}></img>
-                <Item item={item.name} />
+                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
+                 <Item item={item.name} />
+                </a>
                 <Item item={item.price} />
               </div>
               <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
@@ -138,7 +150,9 @@ const App = () => {
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
                 <img src={item.url}></img>
-                <Item item={item.name} />
+                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
+                 <Item item={item.name} />
+                </a>
                 <Item item={item.price} />
               </div>
               <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
@@ -151,7 +165,9 @@ const App = () => {
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
                 <img src={item.url}></img>
-                <Item item={item.name} />
+                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
+                 <Item item={item.name} />
+                </a>
                 <Item item={item.price} />
               </div>
               <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
@@ -164,7 +180,9 @@ const App = () => {
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
                 <img src={item.url}></img>
-                <Item item={item.name} />
+                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
+                 <Item item={item.name} />
+                </a>
                 <Item item={item.price} />
               </div>
               <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
@@ -177,7 +195,9 @@ const App = () => {
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
                 <img src={item.url}></img>
-                <Item item={item.name} />
+                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
+                 <Item item={item.name} />
+                </a>
                 <Item item={item.price} />
               </div>
               <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
@@ -190,7 +210,9 @@ const App = () => {
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
                 <img src={item.url}></img>
-                <Item item={item.name} />
+                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
+                 <Item item={item.name} />
+                </a>
                 <Item item={item.price} />
               </div>
               <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
@@ -213,7 +235,9 @@ const App = () => {
                     <img style={{ marginRight: "20px", width: "32px", height: "32px"}} src={item.url}></img>
                   
                   <div style={{ display: "flex", flexDirection: "column"}}>
-                    <p style={{ color: "#2783ba", textTransform: "capitalize"}}>{item.name}</p>
+                    <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
+                      <p style={{ color: "#2783ba"}}>{item.name}</p>
+                    </a>
                     <p><span style={{ color: "#58b85b" }}>Price: </span>{item.price}</p>
                   <p><span style={{ color: "#58b85b" }}>Location: </span> {item.location}</p>
                   </div>
