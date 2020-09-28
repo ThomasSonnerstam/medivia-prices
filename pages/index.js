@@ -37,6 +37,7 @@ const App = () => {
 
         <div style={{ width: "80%", height: "1px", backgroundColor: "white", margin: "15px 0"}}></div>
         
+        
         {isCities && <>
           <ButtonContainer>
             <Button handleClick={() => { setSelected("arak") }} text="Arak" />
@@ -52,6 +53,7 @@ const App = () => {
             <Button handleClick={() => { setSelected("draculd") }} text="Draculd" />
           </ButtonContainer>
           <div style={{ width: "100%", height: "1px", backgroundColor: "white", margin: "15px 0"}}></div>
+          <p style={{ color: "#fac125" }}>Click the name of the items for the wiki link</p>
           </>}
 
         <List>    
@@ -226,6 +228,7 @@ const App = () => {
         <FormContainer>
           <label htmlFor="search" style={{ color: "white" }}>Search item:</label>
           <input style={{ paddingLeft: "15px", height: "5vh", width: "50%", marginTop: "10px", border: "none", borderRadius: "5px"}} type="text" name="search" id="search" value={userInput} onChange={handleChange}></input>
+          <p style={{ color: "#fac125" }}>Click the name of the items for the wiki link</p>
         </FormContainer>
           <List>
             {results.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
