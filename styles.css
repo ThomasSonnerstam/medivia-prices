@@ -9,6 +9,15 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  color: white;
+}
+
 body,
 html {
   margin: 0;
@@ -30,6 +39,7 @@ button {
   background-color: #2783ba;
   font-size: 16px;
   color: rgb(226, 226, 226);
+  border: none;
 }
 
 button:focus {

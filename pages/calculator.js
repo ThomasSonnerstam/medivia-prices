@@ -7,8 +7,9 @@ import FormContainer from "../components/FormContainer/FormContainer";
 
 const Calculator = () => {
   const [userInput, setUserInput] = useState("");
-  const [cost, setCost] = useState(0);
   const [loot, setLoot] = useState(0);
+  const [itemAmount, setItemAmount] = useState(0);
+  const [lootNames, setLootNames] = useState({ lootInfo: [] });
 
   const handleChange = (event) => {
     setUserInput(event.target.value);
@@ -25,33 +26,58 @@ const Calculator = () => {
       <CalculatorSection>
         <CalculatorHalf>
           <h1>Loot</h1>
-          <p>{loot}</p>
-          <input style={{ width: "15%" }} type="number"></input>
+          <h1>{loot}gp</h1>
+          <ul>
+            {lootNames.lootInfo.map((item, i) => {
+              return <li key={i}>{item}</li>;
+            })}
+          </ul>
         </CalculatorHalf>
 
         <CalculatorHalf>
           <h1>What did you loot?</h1>
-          <FormContainer>
-            <label htmlFor="search" style={{ color: "white" }}>
-              Search item:
-            </label>
-            <input
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <FormContainer>
+              <label htmlFor="search" style={{ color: "white" }}>
+                Search item:
+              </label>
+              <input
+                style={{
+                  paddingLeft: "15px",
+                  height: "5vh",
+                  width: "100%",
+                  maxWidth: "300px",
+                  marginTop: "10px",
+                  border: "none",
+                  borderRadius: "5px",
+                }}
+                type="text"
+                name="search"
+                id="search"
+                value={userInput}
+                onChange={handleChange}
+              ></input>
+            </FormContainer>
+            <button
               style={{
-                paddingLeft: "15px",
-                height: "5vh",
-                width: "100%",
-                maxWidth: "300px",
-                marginTop: "10px",
-                border: "none",
-                borderRadius: "5px",
+                height: "40px",
+                width: "120px",
+                borderRadius: "7px",
+                backgroundColor: "#a1301a",
               }}
-              type="text"
-              name="search"
-              id="search"
-              value={userInput}
-              onChange={handleChange}
-            ></input>
-          </FormContainer>
+              onClick={() => {
+                setLoot(0);
+                setLootNames([]);
+              }}
+            >
+              Reset loot
+            </button>
+          </div>
           <div style={{ display: "flex", flexWrap: "wrap" }}>
             {results
               .sort((a, b) => (a.name > b.name ? 1 : -1))
@@ -105,9 +131,15 @@ const Calculator = () => {
                       }}
                       onSubmit={(e) => {
                         e.preventDefault();
+                        setLoot(loot + itemAmount);
+                        setItemAmount(0);
+                        setLootNames([...lootNames, item.name]);
                       }}
                     >
                       <input
+                        onChange={(e) =>
+                          setItemAmount(e.target.value * item.price)
+                        }
                         style={{ width: "50%", margin: "5px 0" }}
                         type="number"
                       ></input>
@@ -123,40 +155,6 @@ const Calculator = () => {
                         Add
                       </button>
                     </form>
-
-                    {/* <div
-                      style={{
-                        display: "flex",
-                        width: "80%",
-                        justifyContent: "space-between",
-                        marginBottom: "10px",
-                      }}
-                    >
-                      <img
-                        onClick={() => {
-                          setLoot(loot - item.price);
-                        }}
-                        style={{
-                          width: "32px",
-                          height: "32px",
-                          cursor: "pointer",
-                        }}
-                        src="/left-arrow.png"
-                      ></img>
-                      <p style={{ marginTop: "10px" }}>0</p>
-                      <img
-                        onClick={() => {
-                          setLoot(loot + item.price);
-                        }}
-                        style={{
-                          transform: "rotate(180deg)",
-                          width: "32px",
-                          height: "32px",
-                          cursor: "pointer",
-                        }}
-                        src="/left-arrow.png"
-                      ></img>
-                    </div> */}
                   </div>
                 );
               })}
