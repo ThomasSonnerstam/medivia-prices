@@ -1,8 +1,7 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { useState } from "react";
 import Item from "../components/Item/Item";
 import Button from "../components/Button/Button";
 import Section from "../components/Section/Section";
-import List from "../components/List/List";
 import ButtonContainer from "../components/ButtonContainer/ButtonContainer";
 import Layout from "../components/Layout/Layout";
 import allItems from "../allItems";
@@ -37,10 +36,7 @@ const App = () => {
         <p style={{ textAlign: "center", fontSize: "20px", color: "white" }}>
           Choose to filter on cities/NPCs or search under all items
         </p>
-        <p style={{ fontSize: "20px", textAlign: "center" }}>
-          If you find any errors, or want items added - message Revi Black on
-          Legacy.
-        </p>
+
         <ButtonContainer>
           <Button
             handleClick={() => {
@@ -137,9 +133,6 @@ const App = () => {
                 margin: "15px 0",
               }}
             ></div>
-            <p style={{ color: "#fac125", textAlign: "center" }}>
-              Click the name of the items for the wiki link
-            </p>
           </>
         )}
 
@@ -177,10 +170,6 @@ const App = () => {
 
         {isAllItems && (
           <>
-            <p style={{ color: "#fac125" }}>
-              Click the name of the items for the wiki link
-            </p>
-
             <Section>
               <FormContainer>
                 <label htmlFor="search" style={{ color: "white" }}>
@@ -257,6 +246,10 @@ const App = () => {
             </SectionRow>
           </>
         )}
+        <p style={{ fontSize: "20px", textAlign: "center" }}>
+          If you find any errors, or want items added - message Revi Black on
+          Legacy.
+        </p>
       </Section>
     </Layout>
   );

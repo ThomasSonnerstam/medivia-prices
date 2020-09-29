@@ -1,4 +1,6 @@
-import Head from 'next/head'
+/* eslint-disable react/prop-types */
+import React from "react";
+import Head from "next/head";
 
 const Layout = ({ children }) => {
   return (
@@ -16,6 +18,6 @@ const Layout = ({ children }) => {
 
       <div>{children}</div>
     </div>
-  )
-}
-export default Layout
+  );
+};
+export default Layout;
