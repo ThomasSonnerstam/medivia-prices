@@ -35,8 +35,12 @@ const App = () => {
         <h1 style={{ color: "white", fontSize: "30px" }}>
           Medivia sell prices
         </h1>
+        <p>
+          This site helps you know where you should sell your loot for the
+          highest price.
+        </p>
         <p style={{ textAlign: "center", fontSize: "20px", color: "white" }}>
-          Choose to filter on cities/NPCs or search under all items
+          Sort by:
         </p>
 
         <ButtonContainer>
@@ -45,7 +49,7 @@ const App = () => {
               setIsCities(true);
               setIsAllItems(false);
             }}
-            text="Cities/NPC"
+            text="Locations"
           ></Button>
           <Button
             handleClick={() => {
