@@ -17,5 +17,9 @@
     "build": "next build && next export",
     "start": "next start",
     "postbuild": "next-on-netlify"
+  },
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-plugin-react": "^7.21.2"
   }
 }

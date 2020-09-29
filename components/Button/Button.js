@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import React from "react";
 import styled from "@emotion/styled";
 
 const StyledButton = styled.button`
@@ -17,15 +19,12 @@ const StyledButton = styled.button`
   }
 
   @media screen and (min-width: 700px) {
-    width: 25%
+    width: 25%;
   }
-`
+`;
 
-
-const Button = ({text, handleClick}) => {
-  return (
-  <StyledButton onClick={handleClick}>{text}</StyledButton>
-  )
-}
+const Button = ({ text, handleClick }) => {
+  return <StyledButton onClick={handleClick}>{text}</StyledButton>;
+};
 
 export default Button;
