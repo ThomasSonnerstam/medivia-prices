@@ -148,6 +148,12 @@ const Calculator = () => {
                           return item;
                         });
 
+                        const dupe = lootInfo.find(
+                          (item) => item.itemName === item.name
+                        );
+
+                        console.log(dupe);
+
                         setLootInfo([
                           ...lootInfo,
                           newState
