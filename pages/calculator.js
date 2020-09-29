@@ -73,6 +73,7 @@ const Calculator = () => {
                         width: "32px",
                         height: "32px",
                         justifySelf: "center",
+                        marginTop: "5px",
                       }}
                       src={item.url}
                     ></img>
@@ -93,18 +94,37 @@ const Calculator = () => {
                         textAlign: "center",
                       }}
                     >
-                      {item.price}gp
+                      {item.price}
                     </p>
-                    <p
+
+                    <form
                       style={{
-                        border: "none",
-                        borderRadius: "2px",
-                        marginBottom: "3px",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                      }}
+                      onSubmit={(e) => {
+                        e.preventDefault();
                       }}
                     >
-                      Add
-                    </p>
-                    <div
+                      <input
+                        style={{ width: "50%", margin: "5px 0" }}
+                        type="number"
+                      ></input>
+                      <button
+                        style={{
+                          width: "50%",
+                          border: "none",
+                          borderRadius: "3px",
+                          margin: "5px 0",
+                        }}
+                        type="submit"
+                      >
+                        Add
+                      </button>
+                    </form>
+
+                    {/* <div
                       style={{
                         display: "flex",
                         width: "80%",
@@ -136,7 +156,7 @@ const Calculator = () => {
                         }}
                         src="/left-arrow.png"
                       ></img>
-                    </div>
+                    </div> */}
                   </div>
                 );
               })}
