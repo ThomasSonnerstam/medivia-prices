@@ -7,11 +7,7 @@ const ButtonContainer = styled.div`
   justify-content: space-evenly;
 
   @media screen and (min-width: 700px) {
-    width: 80%;
-  }
-
-  @media screen and (min-width: 700px) {
-    width: 100%;
+    width: 60%;
   }
 
   @media screen and (min-width: 1250px) {

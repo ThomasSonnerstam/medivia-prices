@@ -8,6 +8,7 @@ const StyledButton = styled.button`
   cursor: pointer;
   margin: 8px;
   width: 28%;
+  max-width: 120px;
   height: 50px;
 
   :focus {

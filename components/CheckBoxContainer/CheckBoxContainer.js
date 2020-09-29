@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 const CheckBoxContainer = styled.div`
   width: 100%;
+  max-width: 500px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -12,7 +13,7 @@ const CheckBoxContainer = styled.div`
   }
 
   @media screen and (min-width: 1000px) {
-    width: 40%;
+    width: 45%;
   }
 `;
 
