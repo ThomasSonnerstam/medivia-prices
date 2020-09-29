@@ -8,6 +8,8 @@ import allItems from "../allItems";
 import FormContainer from "../components/FormContainer/FormContainer";
 import ItemContainer from "../components/ItemContainer/ItemContainer";
 import SectionRow from "../components/SectionRow/SectionRow";
+import CheckBoxContainer from "../components/CheckBoxContainer/CheckBoxContainer";
+import CheckBox from "../components/CheckBox/CheckBox";
 
 const App = () => {
   const [selected, setSelected] = useState("");
@@ -57,74 +59,140 @@ const App = () => {
 
         {isCities && (
           <>
-            <ButtonContainer>
-              <Button
-                handleClick={() => {
+            <CheckBoxContainer>
+              <CheckBox
+                onClick={() => {
                   setSelected("Arak");
                 }}
-                text="Arak"
-              />
-              <Button
-                handleClick={() => {
+              >
+                <img
+                  style={{ width: "15px", height: "15px", marginRight: "10px" }}
+                  src="/right-arrow.png"
+                ></img>
+                <p>Arak</p>
+              </CheckBox>
+
+              <CheckBox
+                onClick={() => {
                   setSelected("Osaris");
                 }}
-                text="Osaris"
-              />
-              <Button
-                handleClick={() => {
+              >
+                <img
+                  style={{ width: "15px", height: "15px", marginRight: "10px" }}
+                  src="/right-arrow.png"
+                ></img>
+                <p>Osaris</p>
+              </CheckBox>
+
+              <CheckBox
+                onClick={() => {
                   setSelected("Garrogat");
                 }}
-                text="Garrogat"
-              />
-              <Button
-                handleClick={() => {
+              >
+                <img
+                  style={{ width: "15px", height: "15px", marginRight: "10px" }}
+                  src="/right-arrow.png"
+                ></img>
+                <p>Garrogat</p>
+              </CheckBox>
+
+              <CheckBox
+                onClick={() => {
                   setSelected("Lucindel");
                 }}
-                text="Lucindel"
-              />
-              <Button
-                handleClick={() => {
+              >
+                <img
+                  style={{ width: "15px", height: "15px", marginRight: "10px" }}
+                  src="/right-arrow.png"
+                ></img>
+                <p>Lucindel</p>
+              </CheckBox>
+
+              <CheckBox
+                onClick={() => {
                   setSelected("Mittenhoff");
                 }}
-                text="Mittenhoff"
-              />
-              <Button
-                handleClick={() => {
+              >
+                <img
+                  style={{ width: "15px", height: "15px", marginRight: "10px" }}
+                  src="/right-arrow.png"
+                ></img>
+                <p>Mittenhoff</p>
+              </CheckBox>
+
+              <CheckBox
+                onClick={() => {
                   setSelected("Blue djinn");
                 }}
-                text="Blue djinn"
-              />
-              <Button
-                handleClick={() => {
+              >
+                <img
+                  style={{ width: "15px", height: "15px", marginRight: "10px" }}
+                  src="/right-arrow.png"
+                ></img>
+                <p>Blue djinn</p>
+              </CheckBox>
+
+              <CheckBox
+                onClick={() => {
                   setSelected("Green djinn");
                 }}
-                text="Green djinn"
-              />
-              <Button
-                handleClick={() => {
+              >
+                <img
+                  style={{ width: "15px", height: "15px", marginRight: "10px" }}
+                  src="/right-arrow.png"
+                ></img>
+                <p>Green djinn</p>
+              </CheckBox>
+
+              <CheckBox
+                onClick={() => {
                   setSelected("Wulkan");
                 }}
-                text="Wulkan"
-              />
-              <Button
-                handleClick={() => {
+              >
+                <img
+                  style={{ width: "15px", height: "15px", marginRight: "10px" }}
+                  src="/right-arrow.png"
+                ></img>
+                <p>Wulkan</p>
+              </CheckBox>
+
+              <CheckBox
+                onClick={() => {
                   setSelected("Aremis");
                 }}
-                text="Aremis"
-              />
-              <Button
-                handleClick={() => {
+              >
+                <img
+                  style={{ width: "15px", height: "15px", marginRight: "10px" }}
+                  src="/right-arrow.png"
+                ></img>
+                <p>Aremis</p>
+              </CheckBox>
+
+              <CheckBox
+                onClick={() => {
                   setSelected("Ziyad");
                 }}
-                text="Ziyad"
-              />
-              <Button
-                handleClick={() => {
+              >
+                <img
+                  style={{ width: "15px", height: "15px", marginRight: "10px" }}
+                  src="/right-arrow.png"
+                ></img>
+                <p>Ziyad</p>
+              </CheckBox>
+
+              <CheckBox
+                onClick={() => {
                   setSelected("Draculd");
                 }}
-                text="Draculd"
-              />
-            </ButtonContainer>
+              >
+                <img
+                  style={{ width: "15px", height: "15px", marginRight: "10px" }}
+                  src="/right-arrow.png"
+                ></img>
+                <p>Draculd</p>
+              </CheckBox>
+            </CheckBoxContainer>
+
             <div
               style={{
                 width: "100%",
