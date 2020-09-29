@@ -9,7 +9,8 @@ const Calculator = () => {
   const [userInput, setUserInput] = useState("");
   const [loot, setLoot] = useState(0);
   const [itemAmount, setItemAmount] = useState(0);
-  const [lootNames, setLootNames] = useState({ lootInfo: [] });
+  const [lootInfo, setLootInfo] = useState([{ itemName: "", amount: 0 }]);
+  const [targetAmount, setTargetAmount] = useState(0);
 
   const handleChange = (event) => {
     setUserInput(event.target.value);
@@ -28,8 +29,12 @@ const Calculator = () => {
           <h1>Loot</h1>
           <h1>{loot}gp</h1>
           <ul>
-            {lootNames.lootInfo.map((item, i) => {
-              return <li key={i}>{item}</li>;
+            {lootInfo.map((item, i) => {
+              return (
+                <li key={i}>
+                  {item.amount}x {item.itemName}
+                </li>
+              );
             })}
           </ul>
         </CalculatorHalf>
@@ -72,7 +77,7 @@ const Calculator = () => {
               }}
               onClick={() => {
                 setLoot(0);
-                setLootNames([]);
+                setLootInfo([]);
               }}
             >
               Reset loot
@@ -132,14 +137,33 @@ const Calculator = () => {
                       onSubmit={(e) => {
                         e.preventDefault();
                         setLoot(loot + itemAmount);
+
+                        const newState = lootInfo.map((item) => {
+                          if (item.itemName === item.name) {
+                            return {
+                              ...item,
+                              amount: item.amount + targetAmount,
+                            };
+                          }
+                          return item;
+                        });
+
+                        setLootInfo([
+                          ...lootInfo,
+                          newState
+                            ? newState
+                            : { itemName: item.name, amount: targetAmount },
+                        ]);
+
                         setItemAmount(0);
-                        setLootNames([...lootNames, item.name]);
+                        setTargetAmount(0);
                       }}
                     >
                       <input
-                        onChange={(e) =>
-                          setItemAmount(e.target.value * item.price)
-                        }
+                        onChange={(e) => {
+                          setItemAmount(e.target.value * item.price);
+                          setTargetAmount(e.target.value);
+                        }}
                         style={{ width: "50%", margin: "5px 0" }}
                         type="number"
                       ></input>
