@@ -15,8 +15,8 @@ const ButtonContainer = styled.div`
   }
 
   @media screen and (min-width: 1250px) {
-    width: 60%;
+    width: 40%;
   }
-`
+`;
 
 export default ButtonContainer;

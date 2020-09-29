@@ -58,9 +58,7 @@ const App = () => {
             text="All items"
           ></Button>
         </ButtonContainer>
-      </Section>
 
-      <Section>
         {isCities && (
           <>
             <ButtonContainer>
@@ -144,40 +142,39 @@ const App = () => {
             </p>
           </>
         )}
-      </Section>
-      <SectionRow>
-        {citiesNpc
-          .sort((a, b) => (a.name > b.name ? 1 : -1))
-          .map((item, i) => {
-            return (
-              <ItemContainer key={i}>
-                <img
-                  style={{ width: "32px", height: "32px" }}
-                  src={item.url}
-                ></img>
-                <a
-                  href={`https://wiki.mediviastats.info/${item.name
-                    .split(" ")
-                    .join("_")}`}
-                >
-                  <Item item={item.name} />
-                </a>
-                <p
-                  style={{
-                    color: "#dee0df",
-                    fontSize: "16px",
-                    margin: "7px 0",
-                    textAlign: "center",
-                  }}
-                >
-                  {item.price}gp
-                </p>
-              </ItemContainer>
-            );
-          })}
-      </SectionRow>
 
-      <Section>
+        <SectionRow>
+          {citiesNpc
+            .sort((a, b) => (a.name > b.name ? 1 : -1))
+            .map((item, i) => {
+              return (
+                <ItemContainer key={i}>
+                  <img
+                    style={{ width: "32px", height: "32px" }}
+                    src={item.url}
+                  ></img>
+                  <a
+                    href={`https://wiki.mediviastats.info/${item.name
+                      .split(" ")
+                      .join("_")}`}
+                  >
+                    <Item item={item.name} />
+                  </a>
+                  <p
+                    style={{
+                      color: "#dee0df",
+                      fontSize: "16px",
+                      margin: "7px 0",
+                      textAlign: "center",
+                    }}
+                  >
+                    {item.price}gp
+                  </p>
+                </ItemContainer>
+              );
+            })}
+        </SectionRow>
+
         {isAllItems && (
           <>
             <p style={{ color: "#fac125" }}>

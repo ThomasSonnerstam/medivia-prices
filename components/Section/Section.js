@@ -5,7 +5,11 @@ const Section = styled.section`
   width: 100vw;
   align-items: center;
   flex-direction: column;
-  padding: 0 5vw;
+  padding: 2vh;
+
+  @media screen and (min-width: 1000px) {
+    padding: 2vh 5vw;
+  }
 `;
 
 export default Section;

@@ -6,7 +6,7 @@ const SectionRow = styled.section`
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding: 0 5vw 5vw 5vw;
+  padding: 2vh;
 
   @media screen and (min-width: 700px) {
   }
