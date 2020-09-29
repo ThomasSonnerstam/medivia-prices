@@ -1,6 +1,13 @@
 const allItems = 
   {
     items: [
+      { name: "White Pearl", price: 160, url: "https://wiki.mediviastats.info/images/4/48/White_Pearl.gif", location: "All jewelers" },
+      { name: "Black Pearl", price: 280, url: "https://wiki.mediviastats.info/images/e/e5/Black_Pearl.gif", location: "All jewelers" },
+      { name: "Small Diamond", price: 300, url: "https://wiki.mediviastats.info/images/c/cc/Small_Diamond_%28Old%29.gif", location: "All jewelers" },
+      { name: "Small Sapphire", price: 250, url: "https://wiki.mediviastats.info/images/6/6b/Small_Sapphire_%28Old%29.gif", location: "All jewelers" },
+      { name: "Small Ruby", price: 250, url: "https://wiki.mediviastats.info/images/9/92/Small_Ruby1.gif", location: "All jewelers" },
+      { name: "Small Emerald", price: 250, url: "https://wiki.mediviastats.info/images/9/98/Small_Emerald1.gif", location: "All jewelers" },
+      { name: "Small Amethyst", price: 200, url: "https://wiki.mediviastats.info/images/0/0c/Small_Amethyst1.gif", location: "All jewelers" },
       { name: "Halberd", price: 400, url: "https://wiki.mediviastats.info/images/1/12/Halberd.png", location: "Arak" },
       { name: "Battle Axe", price: 80, url: "https://wiki.mediviastats.info/images/5/59/Battle_axe.png", location: "Arak" },
       { name: "Brass Armor", price: 150, url: "https://wiki.mediviastats.info/images/b/b6/Brass_armor.png", location: "Arak" },

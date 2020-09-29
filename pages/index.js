@@ -24,7 +24,8 @@ const App = () => {
       item.name.toLowerCase().includes(userInput.toLocaleLowerCase())
     );
 
-
+  const citiesNpc = allItems.items.filter(item => item.location == selected);
+  
   return (
     <Layout>
       <Section>
@@ -41,24 +42,24 @@ const App = () => {
         
         {isCities && <>
           <ButtonContainer>
-            <Button handleClick={() => { setSelected("arak") }} text="Arak" />
-            <Button handleClick={() => { setSelected("osaris") }} text="Osaris" />
-            <Button handleClick={() => { setSelected("garrogat") }} text="Garrogat" />
-            <Button handleClick={() => { setSelected("lucindel") }} text="Lucindel" />
-            <Button handleClick={() => { setSelected("mittenhoff") }} text="Mittenhoff" />
-            <Button handleClick={() => { setSelected("bluedjinn") }} text="Blue djinn" />
-            <Button handleClick={() => { setSelected("greendjinn") }} text="Green djinn" />
-            <Button handleClick={() => { setSelected("wulkan") }} text="Wulkan" />
-            <Button handleClick={() => { setSelected("aremis") }} text="Aremis" />
-            <Button handleClick={() => { setSelected("ziyad") }} text="Ziyad" />
-            <Button handleClick={() => { setSelected("draculd") }} text="Draculd" />
+            <Button handleClick={() => { setSelected("Arak") }} text="Arak" />
+            <Button handleClick={() => { setSelected("Osaris") }} text="Osaris" />
+            <Button handleClick={() => { setSelected("Garrogat") }} text="Garrogat" />
+            <Button handleClick={() => { setSelected("Lucindel") }} text="Lucindel" />
+            <Button handleClick={() => { setSelected("Mittenhoff") }} text="Mittenhoff" />
+            <Button handleClick={() => { setSelected("Blue djinn") }} text="Blue djinn" />
+            <Button handleClick={() => { setSelected("Green djinn") }} text="Green djinn" />
+            <Button handleClick={() => { setSelected("Wulkan") }} text="Wulkan" />
+            <Button handleClick={() => { setSelected("Aremis") }} text="Aremis" />
+            <Button handleClick={() => { setSelected("Ziyad") }} text="Ziyad" />
+            <Button handleClick={() => { setSelected("Draculd") }} text="Draculd" />
           </ButtonContainer>
           <div style={{ width: "100%", height: "1px", backgroundColor: "white", margin: "15px 0"}}></div>
           <p style={{ color: "#fac125" }}>Click the name of the items for the wiki link</p>
           </>}
 
-        <List>    
-        {selected == "arak" && locationItems.arak.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
+          <List>
+          {citiesNpc.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
           return (
             <Fragment key={i}>
               <div style={{ display: "flex", justifyContent: "space-between" }} >
@@ -72,163 +73,18 @@ const App = () => {
             </Fragment>
           )
         })}
-
-        {selected == "osaris" && locationItems.osaris.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
-          return (
-            <Fragment key={i}>
-              <div style={{ display: "flex", justifyContent: "space-between" }} >
-                <img src={item.url}></img>
-                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
-                 <Item item={item.name} />
-                </a>
-                <Item item={item.price} />
-              </div>
-              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-            </Fragment>
-          )
-        })}
-
-        {selected == "garrogat" && locationItems.garrogat.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
-          return (
-            <Fragment key={i}>
-              <div style={{ display: "flex", justifyContent: "space-between" }} >
-                <img src={item.url}></img>
-                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
-                 <Item item={item.name} />
-                </a>
-                <Item item={item.price} />
-              </div>
-              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-            </Fragment>
-          )
-        })}
-
-        {selected == "lucindel" && locationItems.lucindel.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
-          return (
-            <Fragment key={i}>
-              <div style={{ display: "flex", justifyContent: "space-between" }} >
-                <img src={item.url}></img>
-                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
-                 <Item item={item.name} />
-                </a>
-                <Item item={item.price} />
-              </div>
-              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-            </Fragment>
-          )
-        })}
-
-        {selected == "mittenhoff" && locationItems.mittenhoff.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
-          return (
-            <Fragment key={i}>
-              <div style={{ display: "flex", justifyContent: "space-between" }} >
-                <img src={item.url}></img>
-                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
-                 <Item item={item.name} />
-                </a>
-                <Item item={item.price} />
-              </div>
-              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-            </Fragment>
-          )
-        })}
-
-        {selected == "bluedjinn" && locationItems.bluedjinn.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
-          return (
-            <Fragment key={i}>
-              <div style={{ display: "flex", justifyContent: "space-between" }} >
-                <img src={item.url}></img>
-                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
-                 <Item item={item.name} />
-                </a>
-                <Item item={item.price} />
-              </div>
-              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-            </Fragment>
-          )
-        })}
-
-        {selected == "greendjinn" && locationItems.greendjinn.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
-          return (
-            <Fragment key={i}>
-              <div style={{ display: "flex", justifyContent: "space-between" }} >
-                <img src={item.url}></img>
-                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
-                 <Item item={item.name} />
-                </a>
-                <Item item={item.price} />
-              </div>
-              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-            </Fragment>
-          )
-        })}
-
-        {selected == "wulkan" && locationItems.wulkan.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
-          return (
-            <Fragment key={i}>
-              <div style={{ display: "flex", justifyContent: "space-between" }} >
-                <img src={item.url}></img>
-                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
-                 <Item item={item.name} />
-                </a>
-                <Item item={item.price} />
-              </div>
-              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-            </Fragment>
-          )
-        })}
-
-        {selected == "aremis" && locationItems.aremis.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
-          return (
-            <Fragment key={i}>
-              <div style={{ display: "flex", justifyContent: "space-between" }} >
-                <img src={item.url}></img>
-                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
-                 <Item item={item.name} />
-                </a>
-                <Item item={item.price} />
-              </div>
-              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-            </Fragment>
-          )
-        })}
-
-        {selected == "ziyad" && locationItems.ziyad.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
-          return (
-            <Fragment key={i}>
-              <div style={{ display: "flex", justifyContent: "space-between" }} >
-                <img src={item.url}></img>
-                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
-                 <Item item={item.name} />
-                </a>
-                <Item item={item.price} />
-              </div>
-              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-            </Fragment>
-          )
-        })}
-
-        {selected == "draculd" && locationItems.draculd.sort((a, b) => a.name > b.name ? 1 : -1).map((item, i) => {
-          return (
-            <Fragment key={i}>
-              <div style={{ display: "flex", justifyContent: "space-between" }} >
-                <img src={item.url}></img>
-                <a href={`https://wiki.mediviastats.info/${item.name.split(" ").join("_")}`}>
-                 <Item item={item.name} />
-                </a>
-                <Item item={item.price} />
-              </div>
-              <div style={{ width: "100%", height: "1px", backgroundColor: "white"}}></div>
-            </Fragment>
-          )
-        })}
-        </List>
+          </List>
 
         {isAllItems && 
         <>
         <FormContainer>
           <label htmlFor="search" style={{ color: "white" }}>Search item:</label>
-          <input style={{ paddingLeft: "15px", height: "5vh", width: "50%", marginTop: "10px", border: "none", borderRadius: "5px"}} type="text" name="search" id="search" value={userInput} onChange={handleChange}></input>
+          <input 
+            style={{ paddingLeft: "15px", 
+            height: "5vh", width: "50%", 
+            marginTop: "10px", border: "none", 
+            borderRadius: "5px"}} 
+            type="text" name="search" id="search" value={userInput} onChange={handleChange}></input>
           <p style={{ color: "#fac125" }}>Click the name of the items for the wiki link</p>
         </FormContainer>
           <List>
