@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import CalculatorHalf from "../components/CalculatorHalf/CalculatorHalf";
 import CalculatorSection from "../components/CalculatorSection/CalculatorSection";
 import Layout from "../components/Layout/Layout";
@@ -11,6 +11,16 @@ const Calculator = () => {
   const [itemAmount, setItemAmount] = useState(0);
   const [lootInfo, setLootInfo] = useState([{ itemName: "", amount: 0 }]);
   const [targetAmount, setTargetAmount] = useState(0);
+
+  const usePreviousValue = (value) => {
+    const ref = useRef();
+    useEffect(() => {
+      ref.current = value;
+    });
+    return ref.current;
+  };
+
+  const prevAmount = usePreviousValue(targetAmount);
 
   const handleChange = (event) => {
     setUserInput(event.target.value);
@@ -38,6 +48,10 @@ const Calculator = () => {
                 );
               })}
           </ul>
+
+          <div>
+            <h1>Supplies used:</h1>
+          </div>
         </CalculatorHalf>
 
         <CalculatorHalf>
@@ -126,7 +140,7 @@ const Calculator = () => {
                         textAlign: "center",
                       }}
                     >
-                      {item.price}
+                      {item.price}gp
                     </p>
 
                     <form
@@ -138,13 +152,15 @@ const Calculator = () => {
                       onSubmit={(e) => {
                         e.preventDefault();
                         setLoot(loot + itemAmount);
+                        console.log(prevAmount);
 
                         if (lootInfo.find((a) => a.itemName === item.name)) {
-                          const updatedLoot = lootInfo.map((loot) => {
-                            if (item.name === loot.itemName) {
-                              return { ...loot, amount: targetAmount };
+                          const updatedLoot = lootInfo.map((lootA) => {
+                            if (item.name === lootA.itemName) {
+                              setLoot(loot - prevAmount * itemAmount);
+                              return { ...lootA, amount: targetAmount };
                             }
-                            return loot;
+                            return lootA;
                           });
 
                           setLootInfo(updatedLoot);
@@ -166,6 +182,7 @@ const Calculator = () => {
                         }}
                         style={{ width: "50%", margin: "5px 0" }}
                         type="number"
+                        min="1"
                       ></input>
                       <button
                         style={{
