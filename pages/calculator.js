@@ -29,13 +29,14 @@ const Calculator = () => {
           <h1>Loot</h1>
           <h1>{loot}gp</h1>
           <ul>
-            {lootInfo.map((item, i) => {
-              return (
-                <li key={i}>
-                  {item.amount}x {item.itemName}
-                </li>
-              );
-            })}
+            {loot !== 0 &&
+              lootInfo.map((item, i) => {
+                return (
+                  <li key={i}>
+                    {item.amount}x {item.itemName}
+                  </li>
+                );
+              })}
           </ul>
         </CalculatorHalf>
 
@@ -138,28 +139,21 @@ const Calculator = () => {
                         e.preventDefault();
                         setLoot(loot + itemAmount);
 
-                        const newState = lootInfo.map((item) => {
-                          if (item.itemName === item.name) {
-                            return {
-                              ...item,
-                              amount: item.amount + targetAmount,
-                            };
-                          }
-                          return item;
-                        });
+                        if (lootInfo.find((a) => a.itemName === item.name)) {
+                          const updatedLoot = lootInfo.map((loot) => {
+                            if (item.name === loot.itemName) {
+                              return { ...loot, amount: targetAmount };
+                            }
+                            return loot;
+                          });
 
-                        const dupe = lootInfo.find(
-                          (item) => item.itemName === item.name
-                        );
-
-                        console.log(dupe);
-
-                        setLootInfo([
-                          ...lootInfo,
-                          newState
-                            ? newState
-                            : { itemName: item.name, amount: targetAmount },
-                        ]);
+                          setLootInfo(updatedLoot);
+                        } else {
+                          setLootInfo([
+                            ...lootInfo,
+                            { itemName: item.name, amount: targetAmount },
+                          ]);
+                        }
 
                         setItemAmount(0);
                         setTargetAmount(0);
