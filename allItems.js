@@ -159,6 +159,12 @@ const allItems = {
       location: "Blue djinn",
     },
     {
+      name: "Orb",
+      price: 750,
+      url: "https://wiki.mediviastats.info/images/9/96/Orb.png",
+      location: "Blue djinn",
+    },
+    {
       name: "Fire Axe",
       price: 8000,
       url: "https://wiki.mediviastats.info/images/3/39/Fire_axe.gif",

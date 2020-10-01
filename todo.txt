@@ -1,2 +1,0 @@
-- Add "Orb" to items
-- Make "All items" into an own page... /all-items

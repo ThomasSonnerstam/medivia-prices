@@ -22,16 +22,6 @@ const Calculator = () => {
   const [lootInfo, setLootInfo] = useState([{ itemName: "", amount: 0 }]);
   const [targetAmount, setTargetAmount] = useState(0);
 
-  const usePreviousValue = (value) => {
-    const ref = useRef();
-    useEffect(() => {
-      ref.current = value;
-    });
-    return ref.current;
-  };
-
-  const prevAmount = usePreviousValue(targetAmount);
-
   const handleChange = (event) => {
     setUserInput(event.target.value);
   };
@@ -113,12 +103,11 @@ const Calculator = () => {
                       onSubmit={(e) => {
                         e.preventDefault();
                         setLoot(loot + itemAmount);
-                        console.log(prevAmount);
 
                         if (lootInfo.find((a) => a.itemName === item.name)) {
                           const updatedLoot = lootInfo.map((lootA) => {
                             if (item.name === lootA.itemName) {
-                              setLoot(loot - prevAmount * itemAmount);
+                              setLoot(loot - targetAmount * itemAmount);
                               return { ...lootA, amount: targetAmount };
                             }
                             return lootA;
