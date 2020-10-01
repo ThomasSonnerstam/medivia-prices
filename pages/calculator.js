@@ -4,6 +4,16 @@ import CalculatorSection from "../components/CalculatorSection/CalculatorSection
 import Layout from "../components/Layout/Layout";
 import allItems from "../allItems";
 import FormContainer from "../components/FormContainer/FormContainer";
+import {
+  Input,
+  AddButton,
+  ResetButton,
+  AmountForm,
+  ItemPriceText,
+  ItemNameText,
+  ItemImage,
+  ItemContainer,
+} from "../components/CalculatorComps";
 
 const Calculator = () => {
   const [userInput, setUserInput] = useState("");
@@ -66,89 +76,40 @@ const Calculator = () => {
               <label htmlFor="search" style={{ color: "white" }}>
                 Search item:
               </label>
-              <input
-                style={{
-                  paddingLeft: "15px",
-                  height: "5vh",
-                  width: "100%",
-                  maxWidth: "300px",
-                  marginTop: "10px",
-                  border: "none",
-                  borderRadius: "5px",
-                }}
+              <Input
                 type="text"
                 name="search"
                 id="search"
                 value={userInput}
                 onChange={handleChange}
-              ></input>
+              />
             </FormContainer>
-            <button
-              style={{
-                height: "40px",
-                width: "120px",
-                borderRadius: "7px",
-                backgroundColor: "#a1301a",
-              }}
+            <ResetButton
               onClick={() => {
                 setLoot(0);
                 setLootInfo([]);
               }}
             >
               Reset loot
-            </button>
+            </ResetButton>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap" }}>
             {results
               .sort((a, b) => (a.name > b.name ? 1 : -1))
               .map((item, i) => {
                 return (
-                  <div
-                    key={i}
-                    style={{
-                      width: "30%",
-                      border: "1px solid white",
-                      margin: "2px",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                    }}
-                  >
-                    <img
-                      style={{
-                        width: "32px",
-                        height: "32px",
-                        justifySelf: "center",
-                        marginTop: "5px",
-                      }}
-                      src={item.url}
-                    ></img>
+                  <ItemContainer key={i}>
+                    <ItemImage src={item.url}></ItemImage>
                     <a
                       href={`https://wiki.mediviastats.info/${item.name
                         .split(" ")
                         .join("_")}`}
                     >
-                      <p style={{ textAlign: "center", color: "#58b85b" }}>
-                        {item.name}
-                      </p>
+                      <ItemNameText>{item.name}</ItemNameText>
                     </a>
-                    <p
-                      style={{
-                        color: "#dee0df",
-                        fontSize: "16px",
-                        margin: "0 0 5px 0",
-                        textAlign: "center",
-                      }}
-                    >
-                      {item.price}gp
-                    </p>
+                    <ItemPriceText>{item.price}gp</ItemPriceText>
 
-                    <form
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                      }}
+                    <AmountForm
                       onSubmit={(e) => {
                         e.preventDefault();
                         setLoot(loot + itemAmount);
@@ -176,27 +137,17 @@ const Calculator = () => {
                       }}
                     >
                       <input
+                        style={{ width: "50%", margin: "5px 0" }}
                         onChange={(e) => {
                           setItemAmount(e.target.value * item.price);
                           setTargetAmount(e.target.value);
                         }}
-                        style={{ width: "50%", margin: "5px 0" }}
                         type="number"
                         min="1"
                       ></input>
-                      <button
-                        style={{
-                          width: "50%",
-                          border: "none",
-                          borderRadius: "3px",
-                          margin: "5px 0",
-                        }}
-                        type="submit"
-                      >
-                        Add
-                      </button>
-                    </form>
-                  </div>
+                      <AddButton type="submit">Add</AddButton>
+                    </AmountForm>
+                  </ItemContainer>
                 );
               })}
           </div>

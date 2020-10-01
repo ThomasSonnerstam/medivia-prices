@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import Head from "next/head";
+import Header from "../Header/Header";
 
 const Layout = ({ children }) => {
   return (
@@ -15,6 +16,7 @@ const Layout = ({ children }) => {
         />
         <link rel="icon" href="/icon.png" type="image/png" />
       </Head>
+      <Header />
 
       <div>{children}</div>
     </div>
