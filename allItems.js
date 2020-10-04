@@ -773,6 +773,12 @@ const allItems = {
       location: "Ziyad",
     },
     {
+      name: "Doomgiver",
+      price: 15000,
+      url: "https://wiki.mediviastats.info/images/f/fe/Doomgiver.png",
+      location: "Ziyad",
+    },
+    {
       name: "Steel Boots",
       price: 30000,
       url: "https://wiki.mediviastats.info/images/9/98/Steel_boots.png",
