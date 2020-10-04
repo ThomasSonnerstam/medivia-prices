@@ -34,8 +34,8 @@ const Calculator = () => {
         item.name.toLowerCase().includes(userInput.toLocaleLowerCase())
       );
 
-  console.log(`Target amount: ${targetAmount}, Item amount: ${itemAmount}`);
-  console.log(lootInfo);
+  // console.log(`Target amount: ${targetAmount}, Item amount: ${itemAmount}`);
+  // console.log(lootInfo);
 
   return (
     <Layout>
@@ -109,10 +109,15 @@ const Calculator = () => {
                         e.preventDefault();
                         // setLoot(loot + itemAmount);
 
-                        if (lootInfo.find((a) => a.itemName === item.name)) {
+                        const test = lootInfo.find(
+                          (a) => a.itemName === item.name
+                        );
+
+                        if (test) {
                           const updatedLoot = lootInfo.map((lootA) => {
                             if (item.name === lootA.itemName) {
-                              setLoot(loot - lootA.itemTotalPrice);
+                              let diff = lootA.itemTotalPrice - itemAmount;
+                              setLoot(loot - diff);
                               return {
                                 ...lootA,
                                 amount: targetAmount,
@@ -121,7 +126,6 @@ const Calculator = () => {
                             }
                             return lootA;
                           });
-
                           setLootInfo(updatedLoot);
                         } else {
                           setLootInfo([
@@ -134,6 +138,32 @@ const Calculator = () => {
                           ]);
                           setLoot(loot + itemAmount);
                         }
+
+                        // if (lootInfo.find((a) => a.itemName === item.name)) {
+                        //   const updatedLoot = lootInfo.map((lootA) => {
+                        //     if (item.name === lootA.itemName) {
+                        //       setLoot(loot - lootA.itemTotalPrice);
+                        //       return {
+                        //         ...lootA,
+                        //         amount: targetAmount,
+                        //         itemTotalPrice: itemAmount,
+                        //       };
+                        //     }
+                        //     return lootA;
+                        //   });
+
+                        //   setLootInfo(updatedLoot);
+                        // } else {
+                        //   setLootInfo([
+                        //     ...lootInfo,
+                        //     {
+                        //       itemName: item.name,
+                        //       amount: targetAmount,
+                        //       itemTotalPrice: itemAmount,
+                        //     },
+                        //   ]);
+                        //   setLoot(loot + itemAmount);
+                        // }
 
                         // setItemAmount(0);
                         // setTargetAmount(0);
