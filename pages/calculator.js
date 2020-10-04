@@ -19,7 +19,9 @@ const Calculator = () => {
   const [userInput, setUserInput] = useState("");
   const [loot, setLoot] = useState(0);
   const [itemAmount, setItemAmount] = useState(0);
-  const [lootInfo, setLootInfo] = useState([{ itemName: "", amount: 0 }]);
+  const [lootInfo, setLootInfo] = useState([
+    { itemName: "", amount: 0, itemTotalPrice: 0 },
+  ]);
   const [targetAmount, setTargetAmount] = useState(0);
 
   const handleChange = (event) => {
@@ -31,6 +33,9 @@ const Calculator = () => {
     : allItems.items.filter((item) =>
         item.name.toLowerCase().includes(userInput.toLocaleLowerCase())
       );
+
+  console.log(`Target amount: ${targetAmount}, Item amount: ${itemAmount}`);
+  console.log(lootInfo);
 
   return (
     <Layout>
@@ -102,13 +107,17 @@ const Calculator = () => {
                     <AmountForm
                       onSubmit={(e) => {
                         e.preventDefault();
-                        setLoot(loot + itemAmount);
+                        // setLoot(loot + itemAmount);
 
                         if (lootInfo.find((a) => a.itemName === item.name)) {
                           const updatedLoot = lootInfo.map((lootA) => {
                             if (item.name === lootA.itemName) {
-                              setLoot(loot - targetAmount * itemAmount);
-                              return { ...lootA, amount: targetAmount };
+                              setLoot(loot - lootA.itemTotalPrice);
+                              return {
+                                ...lootA,
+                                amount: targetAmount,
+                                itemTotalPrice: itemAmount,
+                              };
                             }
                             return lootA;
                           });
@@ -117,12 +126,17 @@ const Calculator = () => {
                         } else {
                           setLootInfo([
                             ...lootInfo,
-                            { itemName: item.name, amount: targetAmount },
+                            {
+                              itemName: item.name,
+                              amount: targetAmount,
+                              itemTotalPrice: itemAmount,
+                            },
                           ]);
+                          setLoot(loot + itemAmount);
                         }
 
-                        setItemAmount(0);
-                        setTargetAmount(0);
+                        // setItemAmount(0);
+                        // setTargetAmount(0);
                       }}
                     >
                       <input
