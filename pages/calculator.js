@@ -138,35 +138,6 @@ const Calculator = () => {
                           ]);
                           setLoot(loot + itemAmount);
                         }
-
-                        // if (lootInfo.find((a) => a.itemName === item.name)) {
-                        //   const updatedLoot = lootInfo.map((lootA) => {
-                        //     if (item.name === lootA.itemName) {
-                        //       setLoot(loot - lootA.itemTotalPrice);
-                        //       return {
-                        //         ...lootA,
-                        //         amount: targetAmount,
-                        //         itemTotalPrice: itemAmount,
-                        //       };
-                        //     }
-                        //     return lootA;
-                        //   });
-
-                        //   setLootInfo(updatedLoot);
-                        // } else {
-                        //   setLootInfo([
-                        //     ...lootInfo,
-                        //     {
-                        //       itemName: item.name,
-                        //       amount: targetAmount,
-                        //       itemTotalPrice: itemAmount,
-                        //     },
-                        //   ]);
-                        //   setLoot(loot + itemAmount);
-                        // }
-
-                        // setItemAmount(0);
-                        // setTargetAmount(0);
                       }}
                     >
                       <input
@@ -176,7 +147,7 @@ const Calculator = () => {
                           setTargetAmount(e.target.value);
                         }}
                         type="number"
-                        min="1"
+                        min="0"
                       ></input>
                       <AddButton type="submit">Add</AddButton>
                     </AmountForm>
