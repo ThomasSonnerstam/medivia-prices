@@ -13,6 +13,8 @@ import {
   ItemNameText,
   ItemImage,
   ItemContainer,
+  LeftHalf,
+  RightHalf,
 } from "../components/CalculatorComps";
 
 const Calculator = () => {
@@ -23,6 +25,7 @@ const Calculator = () => {
     { itemName: "", amount: 0, itemTotalPrice: 0 },
   ]);
   const [targetAmount, setTargetAmount] = useState(0);
+  const [supplies, setSupplies] = useState(0);
 
   const handleChange = (event) => {
     setUserInput(event.target.value);
@@ -34,32 +37,58 @@ const Calculator = () => {
         item.name.toLowerCase().includes(userInput.toLocaleLowerCase())
       );
 
-  // console.log(`Target amount: ${targetAmount}, Item amount: ${itemAmount}`);
-  // console.log(lootInfo);
-
   return (
     <Layout>
       <CalculatorSection>
-        <CalculatorHalf>
-          <h1>Loot</h1>
-          <h1>{loot}gp</h1>
+        <LeftHalf>
+          <h1 style={{ marginBottom: "0" }}>Total Loot:</h1>
+          <h1 style={{ color: "#fac125" }}>{loot}gp</h1>
+          <h1 style={{ marginBottom: "0" }}>Total supplies:</h1>
+          <h1 style={{ color: "#fac125" }}>{supplies}</h1>
+          {loot > supplies && (
+            <h1 style={{ color: "green" }}>{`You made ${
+              loot - supplies
+            }gp profit :)`}</h1>
+          )}
+          {loot < supplies && (
+            <h1 style={{ color: "red" }}>{`You wasted ${
+              loot - supplies
+            }gp :(`}</h1>
+          )}
+
           <ul>
             {loot !== 0 &&
               lootInfo.map((item, i) => {
-                return (
-                  <li key={i}>
-                    {item.amount}x {item.itemName}
-                  </li>
-                );
+                if (item.amount > 0) {
+                  return (
+                    <li key={i}>
+                      - {item.amount}x {item.itemName}
+                    </li>
+                  );
+                }
+                return;
               })}
           </ul>
 
-          <div>
+          <div style={{ width: "30%" }}>
             <h1>Supplies used:</h1>
-          </div>
-        </CalculatorHalf>
 
-        <CalculatorHalf>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+              }}
+            >
+              <input
+                onChange={(e) => {
+                  setSupplies(e.target.value);
+                }}
+              ></input>
+              <AddButton type="submit">Add</AddButton>
+            </form>
+          </div>
+        </LeftHalf>
+
+        <RightHalf>
           <h1>What did you loot?</h1>
           <div
             style={{
@@ -107,7 +136,6 @@ const Calculator = () => {
                     <AmountForm
                       onSubmit={(e) => {
                         e.preventDefault();
-                        // setLoot(loot + itemAmount);
 
                         const test = lootInfo.find(
                           (a) => a.itemName === item.name
@@ -155,7 +183,7 @@ const Calculator = () => {
                 );
               })}
           </div>
-        </CalculatorHalf>
+        </RightHalf>
       </CalculatorSection>
     </Layout>
   );

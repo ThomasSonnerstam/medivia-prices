@@ -10,6 +10,20 @@ export const Input = styled.input`
   border-radius: 5px;
 `;
 
+export const LeftHalf = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+`;
+
+export const RightHalf = styled.div`
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50vw;
+`;
+
 export const AddButton = styled.button`
   width: 50%;
   border: none;
