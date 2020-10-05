@@ -7,6 +7,24 @@ const allItems = {
       location: "All jewelers",
     },
     {
+      name: "Viking Helmet",
+      price: 66,
+      url: "https://wiki.mediviastats.info/images/5/59/Viking_helmet.png",
+      location: "Osaris",
+    },
+    {
+      name: "Chain Legs",
+      price: 25,
+      url: "https://wiki.mediviastats.info/images/0/08/Chain_legs.png",
+      location: "Garrogat",
+    },
+    {
+      name: "Brass Legs",
+      price: 49,
+      url: "https://wiki.mediviastats.info/images/6/62/Brass_legs.png",
+      location: "Osaris",
+    },
+    {
       name: "Plate Shield",
       price: 45,
       url: "https://wiki.mediviastats.info/images/1/10/Plate_shield.png",
