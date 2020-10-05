@@ -55,6 +55,9 @@ const Calculator = () => {
               loot - supplies
             }gp :(`}</h1>
           )}
+          {loot == supplies && (
+            <h1 style={{ color: "#fac125" }}>You broke even!</h1>
+          )}
 
           <ul>
             {loot !== 0 &&
@@ -83,7 +86,6 @@ const Calculator = () => {
                   setSupplies(e.target.value);
                 }}
               ></input>
-              <AddButton type="submit">Add</AddButton>
             </form>
           </div>
         </LeftHalf>
