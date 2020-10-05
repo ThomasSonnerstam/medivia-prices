@@ -82,6 +82,7 @@ const Calculator = () => {
               }}
             >
               <input
+                type="number"
                 onChange={(e) => {
                   setSupplies(e.target.value);
                 }}
