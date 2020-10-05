@@ -25,6 +25,7 @@ const Header = () => {
         <Link href="/">Home</Link>
         <Link href="/locations">Locations</Link>
         <Link href="/all-items">All items</Link>
+        <Link href="/calculator">Hunt calculator (work in progress)</Link>
       </StyledHeader>
       <Line />
     </>
