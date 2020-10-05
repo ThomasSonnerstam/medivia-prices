@@ -37,6 +37,8 @@ const Calculator = () => {
         item.name.toLowerCase().includes(userInput.toLocaleLowerCase())
       );
 
+  console.log(targetAmount);
+
   return (
     <Layout>
       <CalculatorSection>
@@ -158,7 +160,7 @@ const Calculator = () => {
                             return lootA;
                           });
                           setLootInfo(updatedLoot);
-                        } else {
+                        } else if (targetAmount > 0) {
                           setLootInfo([
                             ...lootInfo,
                             {
@@ -169,6 +171,7 @@ const Calculator = () => {
                           ]);
                           setLoot(loot + itemAmount);
                         }
+                        setTargetAmount(0);
                       }}
                     >
                       <input
