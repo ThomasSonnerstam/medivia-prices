@@ -51,6 +51,22 @@ const App = () => {
 
             <CheckBox
               onClick={() => {
+                setSelected("P.K");
+              }}
+            >
+              <img
+                style={{
+                  width: "15px",
+                  height: "15px",
+                  marginRight: "10px",
+                }}
+                src="/right-arrow.png"
+              ></img>
+              <p>P.K</p>
+            </CheckBox>
+
+            <CheckBox
+              onClick={() => {
                 setSelected("Garrogat");
               }}
             >

@@ -7,6 +7,36 @@ const allItems = {
       location: "All jewelers",
     },
     {
+      name: "Plate Shield",
+      price: 45,
+      url: "https://wiki.mediviastats.info/images/1/10/Plate_shield.png",
+      location: "Osaris",
+    },
+    {
+      name: "Chain Helmet",
+      price: 17,
+      url: "https://wiki.mediviastats.info/images/9/9b/Chain_helmet.png",
+      location: "Garrogat",
+    },
+    {
+      name: "Brass Helmet",
+      price: 30,
+      url: "https://wiki.mediviastats.info/images/6/67/Brass_helmet.png",
+      location: "Osaris",
+    },
+    {
+      name: "Chain Armor",
+      price: 70,
+      url: "https://wiki.mediviastats.info/images/e/ee/Chain_armor.png",
+      location: "Garrogat",
+    },
+    {
+      name: "Scale Armor",
+      price: 75,
+      url: "https://wiki.mediviastats.info/images/f/fa/Scale_armor.png",
+      location: "P.K",
+    },
+    {
       name: "Black Pearl",
       price: 280,
       url: "https://wiki.mediviastats.info/images/e/e5/Black_Pearl.gif",
@@ -114,6 +144,18 @@ const allItems = {
       name: "Clerical Mace",
       price: 170,
       url: "https://wiki.mediviastats.info/images/a/a3/Clerical_mace.png",
+      location: "Garrogat",
+    },
+    {
+      name: "Mace",
+      price: 30,
+      url: "https://wiki.mediviastats.info/images/6/63/Mace.png",
+      location: "Garrogat",
+    },
+    {
+      name: "Sword",
+      price: 25,
+      url: "https://wiki.mediviastats.info/images/8/89/Sword.png",
       location: "Garrogat",
     },
     {
