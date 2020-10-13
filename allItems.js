@@ -7,6 +7,20 @@ const allItems = {
       location: "All jewelers",
     },
     {
+      name: "Ankh",
+      price: 100,
+      url: "https://wiki.mediviastats.info/images/b/b7/Ankh.png",
+      location: "Green djinn",
+    },
+    {
+      name: "Shield of the Heroes",
+      price: 38000,
+      url:
+        "https://wiki.mediviastats.info/images/a/a6/Shield_of_the_heroes.png",
+      location: "Wulkan",
+    },
+
+    {
       name: "Viking Helmet",
       price: 66,
       url: "https://wiki.mediviastats.info/images/5/59/Viking_helmet.png",
