@@ -702,7 +702,7 @@ const allItems = {
     },
     {
       name: "Shakirian Shield",
-      price: 3000,
+      price: 11300,
       url: "https://wiki.mediviastats.info/images/9/9b/Shakirian_shield1.png",
       location: "Wulkan",
     },
