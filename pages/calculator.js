@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
-import CalculatorHalf from "../components/CalculatorHalf/CalculatorHalf";
+import React, { Fragment, useState } from "react";
 import CalculatorSection from "../components/CalculatorSection/CalculatorSection";
 import Layout from "../components/Layout/Layout";
 import allItems from "../allItems";
+import allSupplies from "../allSupplies";
 import FormContainer from "../components/FormContainer/FormContainer";
 import {
   Input,
@@ -15,6 +15,10 @@ import {
   ItemContainer,
   LeftHalf,
   RightHalf,
+  SupplyContainer,
+  SupplyItem,
+  SupplyInput,
+  SupplyLabel,
 } from "../components/CalculatorComps";
 
 const Calculator = () => {
@@ -27,6 +31,11 @@ const Calculator = () => {
   const [targetAmount, setTargetAmount] = useState(0);
   const [supplies, setSupplies] = useState(0);
 
+  const [supplyAmount, setSupplyAmount] = useState(0);
+  const [supplyAmountPrice, setSupplyAmountPrice] = useState(0);
+
+  console.log(supplyAmount, supplyAmountPrice);
+
   const handleChange = (event) => {
     setUserInput(event.target.value);
   };
@@ -37,59 +46,111 @@ const Calculator = () => {
         item.name.toLowerCase().includes(userInput.toLocaleLowerCase())
       );
 
-  console.log(targetAmount);
-
   return (
     <Layout>
       <CalculatorSection>
         <LeftHalf>
-          <h1 style={{ marginBottom: "0" }}>Total Loot:</h1>
-          <h1 style={{ color: "#fac125" }}>{loot}gp</h1>
-          <h1 style={{ marginBottom: "0" }}>Total supplies:</h1>
-          <h1 style={{ color: "#fac125" }}>{supplies}</h1>
-          {loot > supplies && (
-            <h1 style={{ color: "green" }}>{`You made ${
-              loot - supplies
-            }gp profit :)`}</h1>
-          )}
-          {loot < supplies && (
-            <h1 style={{ color: "red" }}>{`You wasted ${
-              loot - supplies
-            }gp :(`}</h1>
-          )}
-          {loot == supplies && (
-            <h1 style={{ color: "#fac125" }}>You broke even!</h1>
-          )}
+          <SupplyContainer>
+            <h1 style={{ color: "#fac125" }}>Backpacks used:</h1>
+            {allSupplies.backpacks.map((item, i) => {
+              return (
+                <div key={i}>
+                  <SupplyItem>
+                    <img
+                      style={{
+                        width: "32px",
+                        height: "32px",
+                        marginRight: "10px",
+                        alignSelf: "center",
+                      }}
+                      src={item.url}
+                    ></img>
+                    <p style={{ color: "#fac125" }}>{item.name}</p>
+                  </SupplyItem>
+                  <div>
+                    <form
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                      }}
+                    >
+                      <SupplyLabel htmlFor="amount">Amount:</SupplyLabel>
+                      <SupplyInput
+                        type="number"
+                        name="amount"
+                        min="0"
+                      ></SupplyInput>
+                      <SupplyLabel htmlFor="price">Price per BP:</SupplyLabel>
+                      <SupplyInput
+                        type="number"
+                        name="price"
+                        min="0"
+                      ></SupplyInput>
+                      <button type="submit">Add</button>
+                    </form>
+                  </div>
+                </div>
+              );
+            })}
+            <h1 style={{ marginTop: "30px", color: "#fac125" }}>Units used:</h1>
+            {allSupplies.singles.map((item, i) => {
+              return (
+                <div key={i}>
+                  <SupplyItem>
+                    <img
+                      style={{
+                        width: "32px",
+                        height: "32px",
+                        marginRight: "10px",
+                        alignSelf: "center",
+                      }}
+                      src={item.url}
+                    ></img>
+                    <p style={{ color: "#fac125" }}>{item.name}</p>
+                  </SupplyItem>
+                  <div>
+                    <form
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                      }}
+                    >
+                      <SupplyLabel htmlFor="amount">Amount:</SupplyLabel>
+                      <SupplyInput
+                        type="number"
+                        name="amount"
+                        min="0"
+                      ></SupplyInput>
+                      <SupplyLabel htmlFor="price">Price per BP:</SupplyLabel>
+                      <SupplyInput
+                        type="number"
+                        name="price"
+                        min="0"
+                      ></SupplyInput>
+                      <button type="submit">Add</button>
+                    </form>
+                  </div>
+                </div>
+              );
+            })}
+          </SupplyContainer>
+          <div>
+            <h1 style={{ marginBottom: "0" }}>Total Loot:</h1>
+            <h1 style={{ color: "#fac125" }}>{loot}gp</h1>
+            <h1 style={{ marginBottom: "0" }}>Total supplies:</h1>
+            <h1 style={{ color: "#fac125" }}>{supplies}</h1>
 
-          <ul>
-            {loot !== 0 &&
-              lootInfo.map((item, i) => {
-                if (item.amount > 0) {
-                  return (
-                    <li key={i}>
-                      - {item.amount}x {item.itemName}
-                    </li>
-                  );
-                }
-                return;
-              })}
-          </ul>
-
-          <div style={{ width: "30%" }}>
-            <h1>Supplies used:</h1>
-
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-              }}
-            >
-              <input
-                type="number"
-                onChange={(e) => {
-                  setSupplies(e.target.value);
-                }}
-              ></input>
-            </form>
+            <ul>
+              {loot !== 0 &&
+                lootInfo.map((item, i) => {
+                  if (item.amount > 0) {
+                    return (
+                      <li key={i}>
+                        - {item.amount}x {item.itemName}
+                      </li>
+                    );
+                  }
+                  return;
+                })}
+            </ul>
           </div>
         </LeftHalf>
 
@@ -142,11 +203,11 @@ const Calculator = () => {
                       onSubmit={(e) => {
                         e.preventDefault();
 
-                        const test = lootInfo.find(
+                        const duplicate = lootInfo.find(
                           (a) => a.itemName === item.name
                         );
 
-                        if (test) {
+                        if (duplicate) {
                           const updatedLoot = lootInfo.map((lootA) => {
                             if (item.name === lootA.itemName) {
                               let diff = lootA.itemTotalPrice - itemAmount;

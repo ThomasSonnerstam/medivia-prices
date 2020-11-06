@@ -13,15 +13,13 @@ export const Input = styled.input`
 export const LeftHalf = styled.div`
   width: 50%;
   display: flex;
-  flex-direction: column;
-  position: fixed;
+  justify-content: space-around;
 `;
 
 export const RightHalf = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  margin-left: 50vw;
 `;
 
 export const AddButton = styled.button`
@@ -69,4 +67,22 @@ export const ItemImage = styled.img`
   width: 32px;
   height: 32px;
   margin-top: 5px;
+`;
+
+export const SupplyContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const SupplyItem = styled.div`
+  display: flex;
+`;
+
+export const SupplyInput = styled.input`
+  width: 10%;
+  margin-right: 5px;
+`;
+
+export const SupplyLabel = styled.label`
+  margin-right: 5px;
 `;
