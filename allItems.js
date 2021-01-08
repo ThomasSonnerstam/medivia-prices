@@ -7,6 +7,30 @@ const allItems = {
       location: "All jewelers",
     },
     {
+      name: "Small Onyx",
+      price: 460,
+      url: "https://wiki.mediviastats.info/images/f/fa/Small_Onyx.gif",
+      location: "All jewelers",
+    },
+    {
+      name: "Small Topaz",
+      price: 440,
+      url: "https://wiki.mediviastats.info/images/0/00/Small_Topaz.gif",
+      location: "All jewelers",
+    },
+    {
+      name: "Talon",
+      price: 320,
+      url: "https://wiki.mediviastats.info/images/e/eb/Talon.gif",
+      location: "Osaris",
+    },
+    {
+      name: "Protection Amulet",
+      price: 100,
+      url: "https://wiki.mediviastats.info/images/6/63/Protection_amulet.png",
+      location: "Green djinn",
+    },
+    {
       name: "Ankh",
       price: 100,
       url: "https://wiki.mediviastats.info/images/b/b7/Ankh.png",
@@ -23,7 +47,7 @@ const allItems = {
     {
       name: "Viking Helmet",
       price: 66,
-      url: "https://wiki.mediviastats.info/images/5/59/Viking_helmet.png",
+      url: "https://wiki.mediviastats.info/images/7/72/Viking_Helmet.png",
       location: "Osaris",
     },
     {
@@ -35,19 +59,19 @@ const allItems = {
     {
       name: "Brass Legs",
       price: 49,
-      url: "https://wiki.mediviastats.info/images/6/62/Brass_legs.png",
+      url: "https://wiki.mediviastats.info/images/3/39/Brass_Legs.png",
       location: "Osaris",
     },
     {
       name: "Plate Shield",
       price: 45,
-      url: "https://wiki.mediviastats.info/images/1/10/Plate_shield.png",
+      url: "https://wiki.mediviastats.info/images/2/2d/Plate_Shield.png",
       location: "Osaris",
     },
     {
       name: "Chain Helmet",
       price: 17,
-      url: "https://wiki.mediviastats.info/images/9/9b/Chain_helmet.png",
+      url: "https://wiki.mediviastats.info/images/9/99/Chain_Helmet.png",
       location: "Garrogat",
     },
     {
@@ -59,13 +83,13 @@ const allItems = {
     {
       name: "Chain Armor",
       price: 70,
-      url: "https://wiki.mediviastats.info/images/e/ee/Chain_armor.png",
+      url: "https://wiki.mediviastats.info/images/f/f3/Chain_Armor.png",
       location: "Garrogat",
     },
     {
       name: "Scale Armor",
       price: 75,
-      url: "https://wiki.mediviastats.info/images/f/fa/Scale_armor.png",
+      url: "https://wiki.mediviastats.info/images/0/0a/Scale_Armor.png",
       location: "P.K",
     },
     {
@@ -84,26 +108,25 @@ const allItems = {
     {
       name: "Small Sapphire",
       price: 250,
-      url:
-        "https://wiki.mediviastats.info/images/6/6b/Small_Sapphire_%28Old%29.gif",
+      url: "https://wiki.mediviastats.info/images/4/4a/Small_Sapphire.gif",
       location: "All jewelers",
     },
     {
       name: "Small Ruby",
       price: 250,
-      url: "https://wiki.mediviastats.info/images/9/92/Small_Ruby1.gif",
+      url: "https://wiki.mediviastats.info/images/d/d2/Small_Ruby.gif",
       location: "All jewelers",
     },
     {
       name: "Small Emerald",
       price: 250,
-      url: "https://wiki.mediviastats.info/images/9/98/Small_Emerald1.gif",
+      url: "https://wiki.mediviastats.info/images/c/c2/Small_Emerald.gif",
       location: "All jewelers",
     },
     {
       name: "Small Amethyst",
       price: 200,
-      url: "https://wiki.mediviastats.info/images/0/0c/Small_Amethyst1.gif",
+      url: "https://wiki.mediviastats.info/images/7/79/Small_Amethyst.gif",
       location: "All jewelers",
     },
     {
@@ -115,67 +138,67 @@ const allItems = {
     {
       name: "Battle Axe",
       price: 80,
-      url: "https://wiki.mediviastats.info/images/5/59/Battle_axe.png",
+      url: "https://wiki.mediviastats.info/images/c/ca/Battle_Axe.png",
       location: "Arak",
     },
     {
       name: "Brass Armor",
       price: 150,
-      url: "https://wiki.mediviastats.info/images/b/b6/Brass_armor.png",
+      url: "https://wiki.mediviastats.info/images/2/26/Brass_Armor.png",
       location: "Arak",
     },
     {
       name: "Battle Hammer",
       price: 120,
-      url: "https://wiki.mediviastats.info/images/5/5d/Battle_hammer.png",
+      url: "https://wiki.mediviastats.info/images/d/d6/Battle_Hammer.png",
       location: "Arak",
     },
     {
       name: "Plate Armor",
       price: 400,
-      url: "https://wiki.mediviastats.info/images/9/9b/Plate_armor.png",
+      url: "https://wiki.mediviastats.info/images/d/d7/Plate_Armor.png",
       location: "Arak",
     },
     {
       name: "Steel Shield",
       price: 80,
-      url: "https://wiki.mediviastats.info/images/b/bc/Steel_shield.png",
+      url: "https://wiki.mediviastats.info/images/2/21/Steel_Shield.png",
       location: "Arak",
     },
     {
       name: "Battle Shield",
       price: 95,
-      url: "https://wiki.mediviastats.info/images/6/67/Battle_shield.png",
+      url: "https://wiki.mediviastats.info/images/7/71/Battle_Shield.png",
       location: "Arak",
     },
     {
       name: "Two Handed Sword",
       price: 450,
-      url: "https://wiki.mediviastats.info/images/2/2f/Two_handed_sword.png",
+      url: "https://wiki.mediviastats.info/images/2/2e/Two_Handed_Sword.png",
       location: "Arak",
     },
     {
       name: "Double Axe",
       price: 260,
-      url: "https://wiki.mediviastats.info/images/2/25/Double_axe.png",
+      url: "https://wiki.mediviastats.info/images/a/a7/Double_Axe.png",
       location: "Osaris",
     },
     {
       name: "Steel Helmet",
       price: 293,
-      url: "https://wiki.mediviastats.info/images/f/f2/Steel_helmet.png",
+      url: "https://wiki.mediviastats.info/images/4/49/Steel_Helmet.png",
       location: "Osaris",
     },
     {
       name: "Morning Star",
       price: 100,
-      url: "https://wiki.mediviastats.info/images/f/fd/Morning_star.png",
+      url: "https://wiki.mediviastats.info/images/b/bc/Morning_Star.png",
       location: "Osaris",
     },
     {
       name: "Clerical Mace",
       price: 170,
-      url: "https://wiki.mediviastats.info/images/a/a3/Clerical_mace.png",
+      url: "https://wiki.mediviastats.info/images/1/15/Clerical_Mace.png",
       location: "Garrogat",
     },
     {
@@ -193,13 +216,13 @@ const allItems = {
     {
       name: "Crystal Ball",
       price: 190,
-      url: "https://wiki.mediviastats.info/images/9/91/Crystal_ball.png",
+      url: "https://wiki.mediviastats.info/images/e/e2/Crystal_Ball.png",
       location: "Garrogat",
     },
     {
       name: "Mind Stone",
       price: 170,
-      url: "https://wiki.mediviastats.info/images/5/50/150.gif",
+      url: "https://wiki.mediviastats.info/images/6/68/Mind_Stone.gif",
       location: "Garrogat",
     },
     {
@@ -211,19 +234,19 @@ const allItems = {
     {
       name: "Viking Shield",
       price: 85,
-      url: "https://wiki.mediviastats.info/images/e/eb/Viking_shield.png",
+      url: "https://wiki.mediviastats.info/images/e/e9/Viking_Shield.png",
       location: "Garrogat",
     },
     {
       name: "Plate Legs",
       price: 115,
-      url: "https://wiki.mediviastats.info/images/b/b9/Plate_legs.png",
+      url: "https://wiki.mediviastats.info/images/c/c4/Plate_Legs.png",
       location: "Lucindel",
     },
     {
       name: "Dwarven Shield",
       price: 100,
-      url: "https://wiki.mediviastats.info/images/9/91/Dwarven_shield.png",
+      url: "https://wiki.mediviastats.info/images/4/4a/Dwarven_Shield.png",
       location: "Mittenhoff",
     },
     {
@@ -253,13 +276,13 @@ const allItems = {
     {
       name: "War Hammer",
       price: 1200,
-      url: "https://wiki.mediviastats.info/images/a/ab/War_hammer.png",
+      url: "https://wiki.mediviastats.info/images/5/5d/War_Hammer.png",
       location: "Blue djinn",
     },
     {
       name: "Spike Sword",
       price: 1000,
-      url: "https://wiki.mediviastats.info/images/f/f6/Spike_sword.png",
+      url: "https://wiki.mediviastats.info/images/1/1d/Spike_Sword.png",
       location: "Blue djinn",
     },
     {
@@ -271,7 +294,7 @@ const allItems = {
     {
       name: "Broad Sword",
       price: 500,
-      url: "https://wiki.mediviastats.info/images/9/91/102.gif",
+      url: "https://wiki.mediviastats.info/images/8/88/Broad_Sword.png",
       location: "Blue djinn",
     },
     {
@@ -358,7 +381,13 @@ const allItems = {
       url: "https://wiki.mediviastats.info/images/8/83/Guardian_shield.png",
       location: "Blue djinn",
     },
-    { name: "Watcher Shield", price: 1200, url: "", location: "Blue djinn" },
+    {
+      name: "Watcher Shield",
+      price: 1200,
+      url: "",
+      url: "https://wiki.mediviastats.info/images/7/72/Beholder_shield.png",
+      location: "Blue djinn",
+    },
     {
       name: "Red Spellwand",
       price: 5000,
@@ -1175,7 +1204,7 @@ const allItems = {
     {
       name: "Red Tunic",
       price: 5000,
-      url: "https://wiki.mediviastats.info/images/3/3b/Fierytunic.png",
+      url: "https://wiki.mediviastats.info/images/0/0e/Red_Tunic.png",
       location: "Draculd",
     },
     {

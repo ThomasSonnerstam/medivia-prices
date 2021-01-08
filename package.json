@@ -13,12 +13,13 @@
     "react-dom": "^16.13.1"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env PORT=8000 next dev",
     "build": "next build && next export",
     "start": "next start",
     "postbuild": "next-on-netlify"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "eslint": "^7.10.0",
     "eslint-plugin-react": "^7.21.2"
   }
