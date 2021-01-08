@@ -27,6 +27,8 @@ const Calculator = () => {
   const [targetAmount, setTargetAmount] = useState(0);
   const [supplies, setSupplies] = useState(0);
 
+  console.log(targetAmount);
+
   const handleChange = (event) => {
     setUserInput(event.target.value);
   };
@@ -111,6 +113,7 @@ const Calculator = () => {
                 id="search"
                 value={userInput}
                 onChange={handleChange}
+                onClick={() => setUserInput("")}
               />
             </FormContainer>
             <ResetButton
@@ -182,6 +185,8 @@ const Calculator = () => {
                         }}
                         type="number"
                         min="0"
+                        value={targetAmount}
+                        onClick={() => setTargetAmount("")}
                       ></input>
                       <AddButton type="submit">Add</AddButton>
                     </AmountForm>
