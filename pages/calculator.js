@@ -46,21 +46,6 @@ const Calculator = () => {
         <LeftHalf>
           <h1 style={{ marginBottom: "0" }}>Total Loot:</h1>
           <h1 style={{ color: "#fac125" }}>{loot}gp</h1>
-          <h1 style={{ marginBottom: "0" }}>Total supplies:</h1>
-          <h1 style={{ color: "#fac125" }}>{supplies}</h1>
-          {loot > supplies && (
-            <h1 style={{ color: "green" }}>{`You made ${
-              loot - supplies
-            }gp profit :)`}</h1>
-          )}
-          {loot < supplies && (
-            <h1 style={{ color: "red" }}>{`You wasted ${
-              loot - supplies
-            }gp :(`}</h1>
-          )}
-          {loot == supplies && (
-            <h1 style={{ color: "#fac125" }}>You broke even!</h1>
-          )}
 
           <ul>
             {loot !== 0 &&
