@@ -26,8 +26,7 @@ const Calculator = () => {
   ]);
   const [targetAmount, setTargetAmount] = useState(0);
   const [supplies, setSupplies] = useState(0);
-
-  console.log(targetAmount);
+  const [gold, setGold] = useState(0);
 
   const handleChange = (event) => {
     setUserInput(event.target.value);
@@ -39,7 +38,7 @@ const Calculator = () => {
         item.name.toLowerCase().includes(userInput.toLocaleLowerCase())
       );
 
-  console.log(targetAmount);
+  console.log(lootInfo);
 
   return (
     <Layout>
@@ -78,19 +77,46 @@ const Calculator = () => {
           </ul>
 
           <div style={{ width: "30%" }}>
-            <h1>Supplies used:</h1>
+            <h1>Gold coins:</h1>
 
             <form
               onSubmit={(e) => {
                 e.preventDefault();
+
+                const findGold = lootInfo.find((a) => a.itemName === "gold");
+
+                if (findGold) {
+                  const updatedLoot = lootInfo.map((lootA) => {
+                    if (lootA.itemName === "gold") {
+                      let diff = lootA.amount;
+                      setLoot(loot - diff);
+                      return {
+                        ...lootA,
+                        amount: gold,
+                      };
+                    }
+                    return lootA;
+                  });
+                  setLootInfo(updatedLoot);
+                } else {
+                  setLootInfo([
+                    ...lootInfo,
+                    { itemName: "gold", amount: gold },
+                  ]);
+                }
               }}
             >
               <input
                 type="number"
+                onClick={(e) => (e.target.value = "")}
                 onChange={(e) => {
-                  setSupplies(e.target.value);
+                  setGold(parseInt(e.target.value));
                 }}
+                value={gold}
               ></input>
+              <AddButton onClick={() => setLoot(loot + gold)} type="submit">
+                Add
+              </AddButton>
             </form>
           </div>
         </LeftHalf>
@@ -120,6 +146,7 @@ const Calculator = () => {
               onClick={() => {
                 setLoot(0);
                 setLootInfo([]);
+                setGold(0);
               }}
             >
               Reset loot
@@ -145,11 +172,11 @@ const Calculator = () => {
                       onSubmit={(e) => {
                         e.preventDefault();
 
-                        const test = lootInfo.find(
+                        const findItem = lootInfo.find(
                           (a) => a.itemName === item.name
                         );
 
-                        if (test) {
+                        if (findItem) {
                           const updatedLoot = lootInfo.map((lootA) => {
                             if (item.name === lootA.itemName) {
                               let diff = lootA.itemTotalPrice - itemAmount;
