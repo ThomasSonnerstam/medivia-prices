@@ -7,6 +7,24 @@ const allItems = {
       location: "All jewelers",
     },
     {
+      name: "Icebound Legs",
+      price: 70000,
+      url: "https://wiki.mediviastats.info/images/f/f5/Icebound_Legs.png",
+      location: "Wulkan",
+    },
+    {
+      name: "Icebound Helmet",
+      price: 60000,
+      url: "https://wiki.mediviastats.info/images/7/7d/Icebound_Helmet.png",
+      location: "Wulkan",
+    },
+    {
+      name: "Icebound Armor",
+      price: 230000,
+      url: "https://wiki.mediviastats.info/images/6/6a/Icebound_Armor.png",
+      location: "Wulkan",
+    },
+    {
       name: "Small Onyx",
       price: 460,
       url: "https://wiki.mediviastats.info/images/f/fa/Small_Onyx.gif",

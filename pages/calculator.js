@@ -38,8 +38,6 @@ const Calculator = () => {
         item.name.toLowerCase().includes(userInput.toLocaleLowerCase())
       );
 
-  console.log(lootInfo);
-
   return (
     <Layout>
       <CalculatorSection>
