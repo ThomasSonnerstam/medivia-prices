@@ -7,6 +7,12 @@ const allItems = {
       location: "All jewelers",
     },
     {
+      name: "Ember Coin",
+      price: 500,
+      url: "https://wiki.mediviastats.info/images/3/3b/Ember_Coin.gif",
+      location: "Evona (Abukir)",
+    },
+    {
       name: "Crystallized Bow",
       price: 40000,
       url: "https://wiki.mediviastats.info/images/b/be/Crystallized_Bow.png",
