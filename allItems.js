@@ -7,6 +7,12 @@ const allItems = {
       location: "All jewelers",
     },
     {
+      name: "Crystallized Bow",
+      price: 40000,
+      url: "https://wiki.mediviastats.info/images/b/be/Crystallized_Bow.png",
+      location: "Aremis",
+    },
+    {
       name: "Icebound Legs",
       price: 70000,
       url: "https://wiki.mediviastats.info/images/f/f5/Icebound_Legs.png",
@@ -324,7 +330,7 @@ const allItems = {
     {
       name: "Crown Armor",
       price: 12000,
-      url: "https://wiki.mediviastats.info/images/d/d5/Crown_armor.png",
+      url: "https://wiki.mediviastats.info/images/6/60/Crown_Armor.png",
       location: "Blue djinn",
     },
     {
@@ -336,31 +342,31 @@ const allItems = {
     {
       name: "Noble Armor",
       price: 900,
-      url: "https://wiki.mediviastats.info/images/9/9d/Noble_armor.png",
+      url: "https://wiki.mediviastats.info/images/7/71/Noble_Armor.png",
       location: "Blue djinn",
     },
     {
       name: "Royal Helmet",
       price: 30000,
-      url: "https://wiki.mediviastats.info/images/0/0c/Royal_helmet.png",
+      url: "https://wiki.mediviastats.info/images/8/8a/Royal_Helmet.png",
       location: "Blue djinn",
     },
     {
       name: "Crusader Helmet",
       price: 6000,
-      url: "https://wiki.mediviastats.info/images/e/e9/Crusader_helmet.png",
+      url: "https://wiki.mediviastats.info/images/4/46/Crusader_Helmet.png",
       location: "Blue djinn",
     },
     {
       name: "Crown Helmet",
       price: 2500,
-      url: "https://wiki.mediviastats.info/images/7/7e/Crown_helmet.png",
+      url: "https://wiki.mediviastats.info/images/0/0c/Crown_Helmet.png",
       location: "Blue djinn",
     },
     {
       name: "Crown Legs",
       price: 12000,
-      url: "https://wiki.mediviastats.info/images/d/d8/Crown_legs.png",
+      url: "https://wiki.mediviastats.info/images/3/31/Crown_Legs.png",
       location: "Blue djinn",
     },
     {
@@ -384,7 +390,7 @@ const allItems = {
     {
       name: "Crown Shield",
       price: 8000,
-      url: "https://wiki.mediviastats.info/images/4/47/Crown_shield.png",
+      url: "https://wiki.mediviastats.info/images/8/87/Crown_Shield.png",
       location: "Blue djinn",
     },
     {
@@ -396,7 +402,7 @@ const allItems = {
     {
       name: "Guardian Shield",
       price: 2000,
-      url: "https://wiki.mediviastats.info/images/8/83/Guardian_shield.png",
+      url: "https://wiki.mediviastats.info/images/1/1c/Guardian_Shield.png",
       location: "Blue djinn",
     },
     {
@@ -433,7 +439,7 @@ const allItems = {
     {
       name: "Giant Sword",
       price: 17000,
-      url: "https://wiki.mediviastats.info/images/c/cd/Giant_sword.png",
+      url: "https://wiki.mediviastats.info/images/1/1b/Giant_Sword.png",
       location: "Green djinn",
     },
     {
@@ -451,7 +457,7 @@ const allItems = {
     {
       name: "Knight Axe",
       price: 2000,
-      url: "https://wiki.mediviastats.info/images/5/55/Knight_axe.png",
+      url: "https://wiki.mediviastats.info/images/c/c5/Knight_Axe.png",
       location: "Green djinn",
     },
     {
@@ -469,25 +475,25 @@ const allItems = {
     {
       name: "Dark Armor",
       price: 400,
-      url: "https://wiki.mediviastats.info/images/2/2e/Dark_armor.png",
+      url: "https://wiki.mediviastats.info/images/9/94/Dark_Armor.png",
       location: "Green djinn",
     },
     {
       name: "Dark Shield",
       price: 166,
-      url: "https://wiki.mediviastats.info/images/e/e6/Dark_shield.png",
+      url: "https://wiki.mediviastats.info/images/2/2b/Dark_Shield.png",
       location: "Green djinn",
     },
     {
       name: "Knight Armor",
       price: 5000,
-      url: "https://wiki.mediviastats.info/images/e/e5/Knight_armor.png",
+      url: "https://wiki.mediviastats.info/images/f/f9/Knight_Armor.png",
       location: "Green djinn",
     },
     {
       name: "Dark Helmet",
       price: 250,
-      url: "https://wiki.mediviastats.info/images/f/f7/Dark_helmet.png",
+      url: "https://wiki.mediviastats.info/images/4/46/Dark_Helmet.png",
       location: "Green djinn",
     },
     {
@@ -499,13 +505,13 @@ const allItems = {
     {
       name: "Warrior Helmet",
       price: 5000,
-      url: "https://wiki.mediviastats.info/images/e/e9/Warrior_helmet.png",
+      url: "https://wiki.mediviastats.info/images/6/68/Warrior_Helmet.png",
       location: "Green djinn",
     },
     {
       name: "Strange Helmet",
       price: 500,
-      url: "https://wiki.mediviastats.info/images/c/c7/Strange_helmet.png",
+      url: "https://wiki.mediviastats.info/images/0/00/Strange_Helmet.png",
       location: "Green djinn",
     },
     {
@@ -517,13 +523,13 @@ const allItems = {
     {
       name: "Knight Legs",
       price: 5000,
-      url: "https://wiki.mediviastats.info/images/f/f3/Knight_legs.png",
+      url: "https://wiki.mediviastats.info/images/d/de/Knight_Legs.png",
       location: "Green djinn",
     },
     {
       name: "Tower Shield",
       price: 8000,
-      url: "https://wiki.mediviastats.info/images/5/56/Tower_shield.png",
+      url: "https://wiki.mediviastats.info/images/5/54/Tower_Shield.png",
       location: "Green djinn",
     },
     {
@@ -560,7 +566,7 @@ const allItems = {
     {
       name: "Red Scale Armor",
       price: 190000,
-      url: "https://wiki.mediviastats.info/images/8/8e/Red_scale_armor.png",
+      url: "https://wiki.mediviastats.info/images/7/77/Red_Scale_Armor.png",
       location: "Wulkan",
     },
     {
@@ -608,7 +614,7 @@ const allItems = {
     {
       name: "Golden Legs",
       price: 50000,
-      url: "https://wiki.mediviastats.info/images/3/32/Golden_legs.png",
+      url: "https://wiki.mediviastats.info/images/e/e1/Golden_Legs.png",
       location: "Wulkan",
     },
     {
@@ -908,7 +914,7 @@ const allItems = {
     {
       name: "Dragon Scale Mail",
       price: 30000,
-      url: "https://wiki.mediviastats.info/images/f/fc/Dragon_scale_mail.png",
+      url: "https://wiki.mediviastats.info/images/7/71/Dragon_Scale_Mail.png",
       location: "Ziyad",
     },
     {
@@ -938,7 +944,8 @@ const allItems = {
     {
       name: "Imperial Soldier Legs",
       price: 20000,
-      url: "https://wiki.mediviastats.info/images/f/f0/Thaian_soldier_legs.png",
+      url:
+        "https://wiki.mediviastats.info/images/8/83/Imperial_Soldier_Legs.png",
       location: "Ziyad",
     },
     {
@@ -950,7 +957,7 @@ const allItems = {
     {
       name: "Golden Armor",
       price: 20000,
-      url: "https://wiki.mediviastats.info/images/4/4d/Golden_armor.png",
+      url: "https://wiki.mediviastats.info/images/a/a2/Golden_Armor.png",
       location: "Ziyad",
     },
     {
@@ -974,7 +981,7 @@ const allItems = {
     {
       name: "Bright Sword",
       price: 8000,
-      url: "https://wiki.mediviastats.info/images/0/06/Bright_sword.png",
+      url: "https://wiki.mediviastats.info/images/5/55/Bright_Sword.png",
       location: "Ziyad",
     },
     {
@@ -1017,7 +1024,7 @@ const allItems = {
       name: "Imperial Soldier Armor",
       price: 5500,
       url:
-        "https://wiki.mediviastats.info/images/0/0e/Thaian_soldier_armor.png",
+        "https://wiki.mediviastats.info/images/a/ad/Imperial_Soldier_Armor.png",
       location: "Ziyad",
     },
     {
@@ -1036,7 +1043,7 @@ const allItems = {
       name: "Imperial Soldier Shield",
       price: 3000,
       url:
-        "https://wiki.mediviastats.info/images/3/31/Thaian_soldier_shield.png",
+        "https://wiki.mediviastats.info/images/3/37/Imperial_Soldier_Shield.png",
       location: "Ziyad",
     },
     {
@@ -1270,7 +1277,7 @@ const allItems = {
     {
       name: "Golden Staff",
       price: 20000,
-      url: "https://wiki.mediviastats.info/images/4/4b/Golden_staff.png",
+      url: "https://wiki.mediviastats.info/images/8/80/Golden_Staff.png",
       location: "Draculd",
     },
     {
