@@ -282,7 +282,7 @@ const allItems = {
     {
       name: "Dragon Lance",
       price: 9000,
-      url: "https://wiki.mediviastats.info/images/6/67/Dragon_lance.png",
+      url: "https://wiki.mediviastats.info/images/1/18/Dragon_Lance.png",
       location: "Blue djinn",
     },
     {
@@ -294,13 +294,13 @@ const allItems = {
     {
       name: "Fire Axe",
       price: 8000,
-      url: "https://wiki.mediviastats.info/images/3/39/Fire_axe.gif",
+      url: "https://wiki.mediviastats.info/images/3/31/Fire_Axe.gif",
       location: "Blue djinn",
     },
     {
       name: "Fire Sword",
       price: 4000,
-      url: "https://wiki.mediviastats.info/images/6/6a/Fire-sword.gif",
+      url: "https://wiki.mediviastats.info/images/4/4c/Fire_Sword.gif",
       location: "Blue djinn",
     },
     {
@@ -318,7 +318,7 @@ const allItems = {
     {
       name: "Ice Rapier",
       price: 1000,
-      url: "https://wiki.mediviastats.info/images/2/28/Ice_rapier.png",
+      url: "https://wiki.mediviastats.info/images/5/5a/Ice_Rapier.png",
       location: "Blue djinn",
     },
     {
@@ -330,7 +330,7 @@ const allItems = {
     {
       name: "Obsidian Lance",
       price: 500,
-      url: "https://wiki.mediviastats.info/images/b/bb/Obsidian_lance.png",
+      url: "https://wiki.mediviastats.info/images/9/90/Obsidian_Lance.png",
       location: "Blue djinn",
     },
     {
@@ -402,7 +402,7 @@ const allItems = {
     {
       name: "Dragon Shield",
       price: 4000,
-      url: "https://wiki.mediviastats.info/images/b/b9/Dragon_shield.png",
+      url: "https://wiki.mediviastats.info/images/e/eb/Dragon_Shield.png",
       location: "Blue djinn",
     },
     {
@@ -415,7 +415,7 @@ const allItems = {
       name: "Watcher Shield",
       price: 1200,
       url: "",
-      url: "https://wiki.mediviastats.info/images/7/72/Beholder_shield.png",
+      url: "https://wiki.mediviastats.info/images/2/29/Watcher_Shield.png",
       location: "Blue djinn",
     },
     {
@@ -451,13 +451,13 @@ const allItems = {
     {
       name: "Serpent Sword",
       price: 900,
-      url: "https://wiki.mediviastats.info/images/a/a5/Serpent_sword.png",
+      url: "https://wiki.mediviastats.info/images/f/ff/Serpent_Sword.png",
       location: "Green djinn",
     },
     {
       name: "Poison Dagger",
       price: 50,
-      url: "https://wiki.mediviastats.info/images/b/b6/Poison_dagger.png",
+      url: "https://wiki.mediviastats.info/images/7/7a/Poison_Dagger.png",
       location: "Green djinn",
     },
     {
@@ -541,19 +541,19 @@ const allItems = {
     {
       name: "Black Shield",
       price: 800,
-      url: "https://wiki.mediviastats.info/images/1/14/Black_shield.png",
+      url: "https://wiki.mediviastats.info/images/2/22/Black_Shield.png",
       location: "Green djinn",
     },
     {
       name: "Ancient Shield",
       price: 900,
-      url: "https://wiki.mediviastats.info/images/e/ec/66.gif",
+      url: "https://wiki.mediviastats.info/images/a/ab/Ancient_Shield.gif",
       location: "Green djinn",
     },
     {
       name: "Vampire Shield",
       price: 15000,
-      url: "https://wiki.mediviastats.info/images/1/1e/Vampire_shield.png",
+      url: "https://wiki.mediviastats.info/images/f/f7/Vampire_Shield.png",
       location: "Green djinn",
     },
     {
@@ -578,19 +578,19 @@ const allItems = {
     {
       name: "Demon Armor",
       price: 150000,
-      url: "https://wiki.mediviastats.info/images/6/6b/Demon_armor.png",
+      url: "https://wiki.mediviastats.info/images/f/f4/Demon_Armor.png",
       location: "Wulkan",
     },
     {
       name: "Magic Sword",
       price: 150000,
-      url: "https://wiki.mediviastats.info/images/7/71/Magic_sword.png",
+      url: "https://wiki.mediviastats.info/images/b/b6/Magic_Sword.png",
       location: "Wulkan",
     },
     {
       name: "Stonecutter Axe",
       price: 150000,
-      url: "https://wiki.mediviastats.info/images/a/a6/772.gif",
+      url: "https://wiki.mediviastats.info/images/c/c4/Stonecutter_Axe.gif",
       location: "Wulkan",
     },
     {
@@ -626,7 +626,7 @@ const allItems = {
     {
       name: "Mastermind Shield",
       price: 50000,
-      url: "https://wiki.mediviastats.info/images/8/8b/Mastermind_shield.png",
+      url: "https://wiki.mediviastats.info/images/b/b7/Mastermind_Shield.png",
       location: "Wulkan",
     },
     {
@@ -638,7 +638,7 @@ const allItems = {
     {
       name: "Demon Helmet",
       price: 45000,
-      url: "https://wiki.mediviastats.info/images/f/fc/Demon_helmet.png",
+      url: "https://wiki.mediviastats.info/images/d/d5/Demon_Helmet.png",
       location: "Wulkan",
     },
     {
@@ -650,7 +650,7 @@ const allItems = {
     {
       name: "Ancient Sword",
       price: 40000,
-      url: "https://wiki.mediviastats.info/images/1/19/Ancinet_Sword.png",
+      url: "https://wiki.mediviastats.info/images/7/76/Ancient_Sword.png",
       location: "Wulkan",
     },
     {
@@ -926,7 +926,7 @@ const allItems = {
     {
       name: "Demon Shield",
       price: 30000,
-      url: "https://wiki.mediviastats.info/images/e/ed/Demon_shield.png",
+      url: "https://wiki.mediviastats.info/images/e/e4/Demon_Shield.png",
       location: "Ziyad",
     },
     {
@@ -999,7 +999,7 @@ const allItems = {
     {
       name: "Guardian Halberd",
       price: 8000,
-      url: "https://wiki.mediviastats.info/images/6/60/Guardian_halberd.png",
+      url: "https://wiki.mediviastats.info/images/a/a7/Guardian_Halberd.png",
       location: "Ziyad",
     },
     {
