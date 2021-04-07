@@ -12,9 +12,18 @@ export const Input = styled.input`
 
 export const LeftHalf = styled.div`
   width: 50%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  padding: 5% 2%;
   display: flex;
   flex-direction: column;
   position: fixed;
+  overflow-y: scroll;
+
+  ::-webkit-scrollbar {
+    width: 0 !important;
+  }
 `;
 
 export const RightHalf = styled.div`

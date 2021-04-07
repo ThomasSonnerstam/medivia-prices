@@ -24,6 +24,8 @@ html {
   box-sizing: border-box;
   background-color: rgb(24, 22, 22);
   overflow-x: hidden;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
 }
 
 p {
