@@ -565,8 +565,7 @@ const allItems = {
     {
       name: "Magic Plate Armor",
       price: 200000,
-      url:
-        "https://wiki.mediviastats.info/images/7/70/Magic_plate_armor_new.png",
+      url: "https://wiki.mediviastats.info/images/7/78/Magic_Plate_Armor.png",
       location: "Wulkan",
     },
     {

@@ -2,7 +2,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const StyledButton = styled.button`
+const StyledButton = styled.Button`
   border: none;
   border-radius: 5px;
   cursor: pointer;

@@ -12,7 +12,7 @@ const App = () => {
           items for the highest price!
         </p>
         <p style={{ fontSize: "20px", textAlign: "center", color: "#fac125" }}>
-          If you find any errors, or want items added - message Revi Black on
+          If you find any errors, or want items added - message Shootieh on
           Legacy.
         </p>
       </Section>
