@@ -979,7 +979,7 @@ const allItems = {
     },
     {
       name: "Swinging Demolisher",
-      price: 11000,
+      price: 16000,
       url: "https://wiki.mediviastats.info/images/c/cf/Swinging_Demolisher.png",
       location: "Ziyad",
     },
