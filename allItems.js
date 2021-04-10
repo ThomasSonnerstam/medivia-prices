@@ -73,6 +73,36 @@ const allItems = {
         "https://wiki.mediviastats.info/images/a/a6/Shield_of_the_heroes.png",
       location: "Wulkan",
     },
+    {
+      name: "Silver Dagger",
+      price: 500,
+      url: "https://wiki.mediviastats.info/images/c/cd/Silver_Dagger.png",
+      location: "Ziyad",
+    },
+    {
+      name: "Elite Knight Armor",
+      price: 80000,
+      url: "https://wiki.mediviastats.info/images/4/40/Elite_Knight_Armor.png",
+      location: "Ziyad",
+    },
+    {
+      name: "Elite Knight Helmet",
+      price: 52000,
+      url: "https://wiki.mediviastats.info/images/d/d0/Elite_Knight_Helmet.png",
+      location: "Ziyad",
+    },
+    {
+      name: "Elite Knight Boots",
+      price: 40000,
+      url: "https://wiki.mediviastats.info/images/0/0c/Elite_Knight_Boots.png",
+      location: "Ziyad",
+    },
+    {
+      name: "Elite Knight Legs",
+      price: 60000,
+      url: "https://wiki.mediviastats.info/images/6/69/Elite_Knight_Legs.png",
+      location: "Ziyad",
+    },
 
     {
       name: "Viking Helmet",
