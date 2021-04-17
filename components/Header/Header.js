@@ -21,7 +21,7 @@ const Line = styled.div`
 const Header = () => {
   return (
     <>
-      <StyledHeader>
+      <StyledHeader style={{ zIndex: 99 }}>
         <Link href="/">Home</Link>
         <Link href="/locations">Locations</Link>
         <Link href="/all-items">All items</Link>
