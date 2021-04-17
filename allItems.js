@@ -80,6 +80,12 @@ const allItems = {
       location: "Ziyad",
     },
     {
+      name: "Rake",
+      price: 240,
+      url: "https://wiki.mediviastats.info/images/b/bd/Rake.png",
+      location: "Ademir"
+    },
+    {
       name: "Elite Knight Armor",
       price: 80000,
       url: "https://wiki.mediviastats.info/images/4/40/Elite_Knight_Armor.png",

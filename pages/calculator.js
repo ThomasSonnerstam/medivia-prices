@@ -151,7 +151,8 @@ const Calculator = () => {
                     >
                       <ItemNameText>{item.name}</ItemNameText>
                     </a>
-                    <ItemPriceText>{item.price}gp</ItemPriceText>
+                    <ItemPriceText>{item.price} gp</ItemPriceText>
+                    <p>Location: {item.location}</p>
 
                     <AmountForm
                       onSubmit={(e) => {
