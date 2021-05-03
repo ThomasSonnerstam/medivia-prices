@@ -74,6 +74,42 @@ const allItems = {
       location: "Wulkan",
     },
     {
+      name: "Hellforged Axe",
+      price: 50000,
+      url: "https://wiki.mediviastats.info/images/8/81/6804.png",
+      location: "Wulkan"
+    },
+    {
+      name: "Serpent Scepter",
+      price: 1500,
+      url: "https://wiki.mediviastats.info/images/4/4f/Serpent_Scepter.png",
+      location: "Blue djinn"
+    },
+    {
+      name: "Frostwarden",
+      price: 30000,
+      url: "https://wiki.mediviastats.info/images/a/aa/Frostwarden.png",
+      location: "Blue djinn"
+    },
+    {
+      name: "Shadowfall",
+      price: 15000,
+      url: "https://wiki.mediviastats.info/images/5/51/Shadowfall.png",
+      location: "Blue djinn"
+    },
+    {
+      name: "Stormcaller",
+      price: 8000,
+      url: "https://wiki.mediviastats.info/images/f/f8/Stormcaller.gif",
+      location: "Blue djinn"
+    },
+    {
+      name: "Fireweaver",
+      price: 4000,
+      url: "https://wiki.mediviastats.info/images/6/6a/Fireweaver.gif",
+      location: "Blue djinn"
+    },
+    {
       name: "Silver Dagger",
       price: 500,
       url: "https://wiki.mediviastats.info/images/c/cd/Silver_Dagger.png",
