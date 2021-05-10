@@ -80,6 +80,30 @@ const allItems = {
       location: "Wulkan"
     },
     {
+      name: "Electric Helmet",
+      price: 5000,
+      url: "https://wiki.mediviastats.info/images/3/3b/Electric_Helmet.gif",
+      location: "Blue djinn"
+    },
+    {
+      name: "Electric Legs",
+      price: 7000,
+      url: "https://wiki.mediviastats.info/images/1/1d/Electric_Legs.gif",
+      location: "Blue djinn"
+    },
+    {
+      name: "Living Thunder",
+      price: 1000,
+      url: "https://wiki.mediviastats.info/images/7/79/Living_Thunder.gif",
+      location: "Blue djinn"
+    },
+    {
+      name: "Electric Armor",
+      price: 10000,
+      url: "https://wiki.mediviastats.info/images/d/d8/Electric_Armor.gif",
+      location: "Blue djinn"
+    },
+    {
       name: "Serpent Scepter",
       price: 1500,
       url: "https://wiki.mediviastats.info/images/4/4f/Serpent_Scepter.png",
