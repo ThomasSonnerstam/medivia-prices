@@ -69,9 +69,14 @@ const allItems = {
     {
       name: "Shield of the Heroes",
       price: 38000,
-      url:
-        "https://wiki.mediviastats.info/images/a/a6/Shield_of_the_heroes.png",
+      url: "https://wiki.mediviastats.info/images/a/a6/Shield_of_the_heroes.png",
       location: "Wulkan",
+    },
+    {
+      name: "Holy Scepter",
+      price: 50000,
+      url: "https://wiki.mediviastats.info/images/8/84/Holy_Scepter.png",
+      location: "Ziyad"
     },
     {
       name: "Hellforged Axe",
