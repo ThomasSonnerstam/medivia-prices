@@ -15,7 +15,7 @@ export const LeftHalf = styled.div`
   height: 100vh;
   top: 0;
   left: 0;
-  padding: 5% 2%;
+  margin: 5% 2%;
   display: flex;
   flex-direction: column;
   position: fixed;
